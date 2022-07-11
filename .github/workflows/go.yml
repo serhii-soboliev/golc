@@ -24,4 +24,15 @@ jobs:
     - name: Test
       run: go test -v ./...
 
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: OpenCover Badge Generator
+        uses: danpetitt/open-cover-badge-generator-action@v1.0.9
+        with:
+          path-to-opencover-xml: ./test/opencover.xml
+          path-to-badges: ./
+          minimum-coverage: 750
+          commit-badges: false
+          repo-token: ${{ secrets.CI_TOKEN }}
 
