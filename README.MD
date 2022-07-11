@@ -1,4 +1,4 @@
 Leetcode practice using GOLANG
 
-![gopherbadger-tag-do-not-edit]()
-gopherbadger -short
+![Build Status](https://github.com/serhii-soboliev/golc/actions/workflows/go.yml/badge.svg)
+
