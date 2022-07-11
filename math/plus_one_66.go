@@ -1,4 +1,4 @@
-package lcmath
+package math
 
 /*
 66. Plus One
