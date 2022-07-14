@@ -5,6 +5,42 @@ package backtracking
 https://leetcode.com/problems/target-sum/
 */
 
+func findTargetSumWaysDP1D(nums []int, target int) int {
+	total := 0
+	for _, n := range nums {
+		total += n
+	}
+
+	abs := func(a int) int {
+		if a < 0 {
+			return -a
+		}
+		return a
+	}
+
+	if abs(target) > total {
+		return 0
+	}
+
+	l := len(nums)
+	dp := make([]int, 2*total+1)
+
+	dp[total-nums[0]] = 1
+	dp[total+nums[0]] += 1
+	for i := 1; i < l; i++ {
+		next := make([]int, 2*total+1)
+		for sum := -total; sum <= total; sum++ {
+			if dp[total+sum] > 0 {
+				next[total+sum+nums[i]] += dp[total+sum]
+				next[total+sum-nums[i]] += dp[total+sum]
+			}
+		}
+		dp = next
+	}
+
+	return dp[target+total]
+}
+
 func findTargetSumWaysDP2D(nums []int, target int) int {
 	total := 0
 	for _, n := range nums {
@@ -112,4 +148,8 @@ func FindTargetSumWaysBruteForce(nums []int, target int) int {
 
 func FindTargetSumWaysDP2D(nums []int, target int) int {
 	return findTargetSumWaysDP2D(nums, target)
+}
+
+func FindTargetSumWaysDP1D(nums []int, target int) int {
+	return findTargetSumWaysDP1D(nums, target)
 }
