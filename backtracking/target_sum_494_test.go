@@ -7,6 +7,12 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func TestFindTargetSumWaysDP2D(t *testing.T) {
+	assert.Equal(t, bt.FindTargetSumWaysDP2D([]int{1, 1, 1, 1, 1}, 3), 5)
+	assert.Equal(t, bt.FindTargetSumWaysDP2D([]int{1}, 1), 1)
+	assert.Equal(t, 256, bt.FindTargetSumWaysDP2D([]int{0, 0, 0, 0, 0, 0, 0, 0, 1}, 1))
+}
+
 func TestFindTargetSumWaysBruteForce(t *testing.T) {
 	assert.Equal(t, bt.FindTargetSumWaysBruteForce([]int{1, 1, 1, 1, 1}, 3), 5)
 	assert.Equal(t, bt.FindTargetSumWaysBruteForce([]int{1}, 1), 1)

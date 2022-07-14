@@ -4,6 +4,48 @@ package backtracking
 494. Target Sum
 https://leetcode.com/problems/target-sum/
 */
+
+func findTargetSumWaysDP2D(nums []int, target int) int {
+	total := 0
+	for _, n := range nums {
+		total += n
+	}
+
+	abs := func(a int) int {
+		if a < 0 {
+			return -a
+		}
+		return a
+	}
+
+	if abs(target) > total {
+		return 0
+	}
+
+	l := len(nums)
+	dp := make([][]int, l)
+	for i := range dp {
+		dp[i] = make([]int, 2*total+1)
+		for j := 0; j < 2*total+1; j++ {
+			dp[i][j] = 0
+		}
+	}
+
+	dp[0][total-nums[0]] = 1
+	dp[0][total+nums[0]] += 1
+	for i := 1; i < l; i++ {
+		v := nums[i]
+		for sum := -total; sum <= total; sum++ {
+			if dp[i-1][total+sum] > 0 {
+				dp[i][total+sum+v] += dp[i-1][total+sum]
+				dp[i][total+sum-v] += dp[i-1][total+sum]
+			}
+		}
+	}
+
+	return dp[l-1][target+total]
+}
+
 func findTargetSumWaysMemoBacktracking(nums []int, target int) int {
 	l := len(nums)
 	total := 0
@@ -66,4 +108,8 @@ func FindTargetSumWaysMemoBacktracking(nums []int, target int) int {
 
 func FindTargetSumWaysBruteForce(nums []int, target int) int {
 	return findTargetSumWaysBruteForce(nums, target)
+}
+
+func FindTargetSumWaysDP2D(nums []int, target int) int {
+	return findTargetSumWaysDP2D(nums, target)
 }
