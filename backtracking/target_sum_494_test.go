@@ -7,7 +7,12 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestFindTargetSumWays(t *testing.T) {
-	assert.Equal(t, bt.FindTargetSumWays([]int{1, 1, 1, 1, 1}, 3), 5)
-	assert.Equal(t, bt.FindTargetSumWays([]int{1}, 1), 1)
+func TestFindTargetSumWaysBruteForce(t *testing.T) {
+	assert.Equal(t, bt.FindTargetSumWaysBruteForce([]int{1, 1, 1, 1, 1}, 3), 5)
+	assert.Equal(t, bt.FindTargetSumWaysBruteForce([]int{1}, 1), 1)
+}
+
+func TestFindTargetSumWaysMemoBacktracking(t *testing.T) {
+	assert.Equal(t, bt.FindTargetSumWaysMemoBacktracking([]int{1, 1, 1, 1, 1}, 3), 5)
+	assert.Equal(t, bt.FindTargetSumWaysMemoBacktracking([]int{1}, 1), 1)
 }
