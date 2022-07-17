@@ -9,6 +9,61 @@ import (
 	"fmt"
 )
 
+func shoppingOffersBacktracking(price []int, special [][]int, needs []int) int {
+
+	dot := func(a []int, b []int) int {
+		if len(a) != len(b) {
+			panic("len(a) != len(b)")
+		}
+		res := 0
+		for i := 0; i < len(a); i++ {
+			res += a[i] * b[i]
+		}
+		return res
+	}
+
+	canUseOffer := func(a []int, b []int) bool {
+		for i := 0; i < len(a); i++ {
+			if a[i] < b[i] {
+				return false
+			}
+		}
+		return true
+	}
+
+	applyOffer := func(a []int, b []int) {
+		for i := 0; i < len(a); i++ {
+			a[i] -= b[i]
+		}
+	}
+
+	revertOffer := func(a []int, b []int) {
+		for i := 0; i < len(a); i++ {
+			a[i] += b[i]
+		}
+	}
+
+	min := func(x int, y int) int {
+		if x > y {
+			return y
+		} else {
+			return x
+		}
+	}
+
+	minPrice := dot(price, needs)
+	for i := 0; i < len(special); i++ {
+		offer := special[i]
+		if canUseOffer(needs, offer) {
+			applyOffer(needs, offer)
+			newPrice := offer[len(offer)-1] + shoppingOffersBacktracking(price, special, needs)
+			minPrice = min(minPrice, newPrice)
+			revertOffer(needs, offer)
+		}
+	}
+	return minPrice
+}
+
 func shoppingOffersDPMemo(price []int, special [][]int, needs []int) int {
 
 	createKey := func(s []int) string {
@@ -129,6 +184,10 @@ func shoppingOffersDP1(price []int, special [][]int, needs []int) int {
 		}
 	}
 	return res
+}
+
+func ShoppingOffersBacktracking(price []int, special [][]int, needs []int) int {
+	return shoppingOffersBacktracking(price, special, needs)
 }
 
 func ShoppingOffersDP1(price []int, special [][]int, needs []int) int {
