@@ -18,3 +18,4 @@ Leetcode practice using GoLang
 |494| Target Sum | [link](backtracking/494.target_sum.go)| [link](backtracking/494.target_sum_test.go)|
 |526| Beautiful Arrangement | [link](backtracking/526.beautiful_arrangement.go)| [link](backtracking/526.beautiful_arrangement_test.go)|
 |638| Shopping Offers  | [link](backtracking/638.shopping_offers.go)| [link](backtracking/638.shopping_offers_test.go)|
+|698| Partition to K Equal Sum Subsets  | [link](backtracking/698.partition_k_equal_sum_subsets.go)| [link](backtracking/698.partition_k_equal_sum_subsets_test.go)|

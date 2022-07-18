@@ -28,3 +28,8 @@ func TestCanPartitionKSubsets5(t *testing.T) {
 	assert.False(t, bt.CanPartitionKSubsets([]int{3,3,10,2,6,5,10,6,8,3,2,1,6,10,7,2}, 6))
 }
 
+func TestCanPartitionKSubsets6(t *testing.T) {
+	assert.False(t, bt.CanPartitionKSubsets([]int{2,9,4,7,3,2,10,5,3,6,6,2,7,5,2,4}, 7))
+}
+
+

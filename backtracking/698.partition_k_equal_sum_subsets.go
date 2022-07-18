@@ -1,14 +1,11 @@
 package backtracking
 
-import (
-	"sort"
-	"fmt"
-)
-
 /*
 698. Partition to K Equal Sum Subsets
 https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
 */
+import "sort"
+
 func canPartitionKSubsets(nums []int, k int) bool {
 	l := len(nums)
 	if k > l {
@@ -21,46 +18,34 @@ func canPartitionKSubsets(nums []int, k int) bool {
 	if s%k != 0 {
 		return false
 	}
-	sort.Ints(nums)
 	expectedSum := s / k
 
-	used := make([]int, len(nums))
+	used := make([]bool, l)
+	sort.Slice(nums, func(i, j int) bool { return nums[i] > nums[j] })
+	var backtracking func(startIndex int, currentSum int, piecesLeft int) bool
 
-	createKey := func(s []int) string {
-		return fmt.Sprintf("%q", s)
-	}
-
-	memo := make(map[string]bool)
-	
-	var backtracking func(currentIndex int, currentSum int, piecesLeft int) bool
-
-	backtracking = func(currentIndex int, currentSum int, piecesLeft int) bool {
-		key := createKey(used)
+	backtracking = func(startIndex int, currentSum int, piecesLeft int) bool {
 		if piecesLeft == 0 {
 			return true
 		}
 		if currentSum == expectedSum {
-			res := backtracking(0, 0, piecesLeft-1)
-			memo[key] = res
-			return res
+			return backtracking(0, 0, piecesLeft-1)
 		}
 
-		if val, ok := memo[key]; ok {
-			return val
-		}
-
-		if currentSum > expectedSum || currentIndex >= l {
+		if currentSum > expectedSum || startIndex >= l {
 			return false
 		}
 
-		if used[currentIndex] == 0 {
-			used[currentIndex] = 1
-			if backtracking(currentIndex+1, currentSum+nums[currentIndex], piecesLeft) {
-				return true
+		for i := startIndex; i < l; i++ {
+			if !used[i] {
+				used[i] = true
+				if backtracking(i+1, currentSum+nums[i], piecesLeft) {
+					return true
+				}
+				used[i] = false
 			}
-			used[currentIndex] = 0
 		}
-		return backtracking(currentIndex+1, currentSum, piecesLeft)
+		return false
 
 	}
 	return backtracking(0, 0, k-1)
