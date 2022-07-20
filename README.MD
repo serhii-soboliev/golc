@@ -20,3 +20,4 @@ Leetcode practice using GoLang
 |638| Shopping Offers  | [link](backtracking/638.shopping_offers.go)| [link](backtracking/638.shopping_offers_test.go)|
 |698| Partition to K Equal Sum Subsets  | [link](backtracking/698.partition_k_equal_sum_subsets.go)| [link](backtracking/698.partition_k_equal_sum_subsets_test.go)|
 |784| Letter Case Permutation  | [link](backtracking/784.letter_case_permutation.go)| [link](backtracking/784.letter_case_permutation_test.go)|
+|792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| [link](pkg/string/792.number_of_matching_subsequences_test.go)|
