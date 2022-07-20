@@ -1,9 +1,38 @@
 package backtracking
 
+import (
+	"strings"
+)
+
 /*
 784. Letter Case Permutation
 https://leetcode.com/problems/letter-case-permutation/
 */
+
+func letterCasePermutation(s string) []string {
+	result := []string{}
+	word := []byte(strings.ToLower(s))
+
+	var permute func(idx int)
+
+	permute = func(idx int) {
+		result = append(result, []string{string(word)}...)
+		for i := idx; i < len(word); i++ {
+			if 'a' <= word[i] && word[i] <= 'z' {
+				word[i] -= 32
+				permute(i)
+				word[i] += 32
+			}
+		}
+	}
+	permute(0)
+	return result
+}
+
+func LetterCasePermutation(s string) []string {
+	return letterCasePermutation(s)
+}
+
 func isUpperCaseLetter(symbol byte) bool {
 	return symbol >= 'A' && symbol <= 'Z'
 }
@@ -36,12 +65,12 @@ func permute(word []byte, idx int, ans *[]string) {
 	permute(newWord, newIdx, ans)
 }
 
-func letterCasePermutation(S string) []string {
+func letterCasePermutationDFS(S string) []string {
 	ans, word := []string{}, []byte(S)
 	permute(word, 0, &ans)
 	return ans
 }
 
-func LetterCasePermutation(s string) []string {
-	return letterCasePermutation(s)
+func LetterCasePermutationDFS(s string) []string {
+	return letterCasePermutationDFS(s)
 }
