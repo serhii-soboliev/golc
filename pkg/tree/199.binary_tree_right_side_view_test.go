@@ -1,7 +1,7 @@
 package tree_test
 
 import (
-	tree "golc/tree"
+	tree "golc/pkg/tree"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

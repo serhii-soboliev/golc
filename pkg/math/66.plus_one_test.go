@@ -1,7 +1,7 @@
 package math_test
 
 import (
-	lcmath "golc/math"
+	lcmath "golc/pkg/math"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

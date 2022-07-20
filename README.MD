@@ -12,8 +12,8 @@ Leetcode practice using GoLang
 
 |#  | Problem          | Link To Solution                              | Link to Test                                 |
 |:-:| :---             | :-                                            | :-                                           |
-|66| Plus One | [link](math/66.plus_one.go)| [link](math/66.plus_one_test.go)|
-|199| Binary Tree Right Side View | [link](tree/199.binary_tree_right_side_view.go)| [link](tree/199.binary_tree_right_side_view_test.go)|
+|66| Plus One | [link](pkg/math/66.plus_one.go)| [link](pkg/math/66.plus_one_test.go)|
+|199| Binary Tree Right Side View | [link](pkg/tree/199.binary_tree_right_side_view.go)| [link](pkg/tree/199.binary_tree_right_side_view_test.go)|
 |491| Increasing Subsequences | [link](pkg/backtracking/491.increasing_subsequences.go)| [link](pkg/backtracking/491.increasing_subsequences_test.go)|
 |494| Target Sum | [link](pkg/backtracking/494.target_sum.go)| [link](pkg/backtracking/494.target_sum_test.go)|
 |526| Beautiful Arrangement | [link](pkg/backtracking/526.beautiful_arrangement.go)| [link](pkg/backtracking/526.beautiful_arrangement_test.go)|
