@@ -6,7 +6,7 @@ https://leetcode.com/problems/beautiful-arrangement/
 */
 
 import (
-	bt "golc/backtracking"
+	bt "golc/pkg/backtracking"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

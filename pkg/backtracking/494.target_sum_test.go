@@ -1,7 +1,7 @@
 package backtracking_test
 
 import (
-	bt "golc/backtracking"
+	bt "golc/pkg/backtracking"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
