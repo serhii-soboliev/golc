@@ -14,6 +14,7 @@ Leetcode practice using GoLang
 |:-:| :---             | :-                                            | :-                                           |
 |66| Plus One | [link](pkg/math/66.plus_one.go)| [link](pkg/math/66.plus_one_test.go)|
 |199| Binary Tree Right Side View | [link](pkg/tree/199.binary_tree_right_side_view.go)| [link](pkg/tree/199.binary_tree_right_side_view_test.go)|
+|240| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| [link](pkg/binarysearch/240.search_2d_matrix_ll_test.go)
 |491| Increasing Subsequences | [link](pkg/backtracking/491.increasing_subsequences.go)| [link](pkg/backtracking/491.increasing_subsequences_test.go)|
 |494| Target Sum | [link](pkg/backtracking/494.target_sum.go)| [link](pkg/backtracking/494.target_sum_test.go)|
 |526| Beautiful Arrangement | [link](pkg/backtracking/526.beautiful_arrangement.go)| [link](pkg/backtracking/526.beautiful_arrangement_test.go)|
@@ -21,3 +22,4 @@ Leetcode practice using GoLang
 |698| Partition to K Equal Sum Subsets  | [link](pkg/backtracking/698.partition_k_equal_sum_subsets.go)| [link](pkg/backtracking/698.partition_k_equal_sum_subsets_test.go)|
 |784| Letter Case Permutation  | [link](pkg/backtracking/784.letter_case_permutation.go)| [link](pkg/backtracking/784.letter_case_permutation_test.go)|
 |792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| [link](pkg/string/792.number_of_matching_subsequences_test.go)|
+|816| Ambiguous Coordinates | [link](pkg/backtracking/816.ambiguous_coordinates.go)| [link](pkg/backtracking/816.ambiguous_coordinates_test.go)|
