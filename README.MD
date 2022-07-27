@@ -24,3 +24,4 @@ Leetcode practice using GoLang
 |784| Letter Case Permutation  | [link](pkg/backtracking/784.letter_case_permutation.go)| [link](pkg/backtracking/784.letter_case_permutation_test.go)|
 |792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| [link](pkg/string/792.number_of_matching_subsequences_test.go)|
 |816| Ambiguous Coordinates | [link](pkg/backtracking/816.ambiguous_coordinates.go)| [link](pkg/backtracking/816.ambiguous_coordinates_test.go)|
+|842| Split Array into Fibonacci Sequence | [link](pkg/backtracking/842.split_array_into_fibonacci_sequence.go)| [link](pkg/backtracking/842.split_array_into_fibonacci_sequence_test.go)|
