@@ -16,7 +16,8 @@ Leetcode practice using GoLang
 |86| Partition list | [link](pkg/linkedlist/86.partition_list.go)| [link](pkg/linkedlist/86.partition_list_test.go)|
 |199| Binary Tree Right Side View | [link](pkg/tree/199.binary_tree_right_side_view.go)| [link](pkg/tree/199.binary_tree_right_side_view_test.go)|
 |240| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| [link](pkg/binarysearch/240.search_2d_matrix_ll_test.go)
-|491| Increasing Subsequences | [link](pkg/backtracking/491.increasing_subsequences.go)| [link](pkg/backtracking/491.increasing_subsequences_test.go)|
+|242| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| [link](pkg/binarysearch/240.search_2d_matrix_ll_test.go)
+|491| Valid Anagram | [link](pkg/string/242.valid_anagram.go)| [link](pkg/string/242.valid_anagram_test.go)|
 |494| Target Sum | [link](pkg/backtracking/494.target_sum.go)| [link](pkg/backtracking/494.target_sum_test.go)|
 |526| Beautiful Arrangement | [link](pkg/backtracking/526.beautiful_arrangement.go)| [link](pkg/backtracking/526.beautiful_arrangement_test.go)|
 |638| Shopping Offers  | [link](pkg/backtracking/638.shopping_offers.go)| [link](pkg/backtracking/638.shopping_offers_test.go)|
