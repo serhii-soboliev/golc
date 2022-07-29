@@ -16,7 +16,7 @@ Leetcode practice using GoLang
 |86| Partition list | [link](pkg/linkedlist/86.partition_list.go)| [link](pkg/linkedlist/86.partition_list_test.go)|
 |199| Binary Tree Right Side View | [link](pkg/tree/199.binary_tree_right_side_view.go)| [link](pkg/tree/199.binary_tree_right_side_view_test.go)|
 |240| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| [link](pkg/binarysearch/240.search_2d_matrix_ll_test.go)
-|242| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| [link](pkg/binarysearch/240.search_2d_matrix_ll_test.go)
+|242| Valid Anagram | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| [link](pkg/binarysearch/240.search_2d_matrix_ll_test.go)
 |491| Valid Anagram | [link](pkg/string/242.valid_anagram.go)| [link](pkg/string/242.valid_anagram_test.go)|
 |494| Target Sum | [link](pkg/backtracking/494.target_sum.go)| [link](pkg/backtracking/494.target_sum_test.go)|
 |526| Beautiful Arrangement | [link](pkg/backtracking/526.beautiful_arrangement.go)| [link](pkg/backtracking/526.beautiful_arrangement_test.go)|
@@ -26,3 +26,4 @@ Leetcode practice using GoLang
 |792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| [link](pkg/string/792.number_of_matching_subsequences_test.go)|
 |816| Ambiguous Coordinates | [link](pkg/backtracking/816.ambiguous_coordinates.go)| [link](pkg/backtracking/816.ambiguous_coordinates_test.go)|
 |842| Split Array into Fibonacci Sequence | [link](pkg/backtracking/842.split_array_into_fibonacci_sequence.go)| [link](pkg/backtracking/842.split_array_into_fibonacci_sequence_test.go)|
+|890| Find and Replace Pattern| [link](pkg/string/890.find_and_replace_pattern.go.go)| [link](pkg/string/890.find_and_replace_pattern_test.go)|
