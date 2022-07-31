@@ -26,4 +26,5 @@ Leetcode practice using GoLang
 |792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| [link](pkg/string/792.number_of_matching_subsequences_test.go)|
 |816| Ambiguous Coordinates | [link](pkg/backtracking/816.ambiguous_coordinates.go)| [link](pkg/backtracking/816.ambiguous_coordinates_test.go)|
 |842| Split Array into Fibonacci Sequence | [link](pkg/backtracking/842.split_array_into_fibonacci_sequence.go)| [link](pkg/backtracking/842.split_array_into_fibonacci_sequence_test.go)|
-|890| Find and Replace Pattern| [link](pkg/string/890.find_and_replace_pattern.go.go)| [link](pkg/string/890.find_and_replace_pattern_test.go)|
+|890| Find and Replace Pattern| [link](pkg/string/890.find_and_replace_pattern.go)| [link](pkg/string/890.find_and_replace_pattern_test.go)|
+|967| Numbers With Same Consecutive Differences| [link](pkg/backtracking/967.numbers_with_same_consecutive_diff.go)| [link](pkg/backtracking/967.numbers_with_same_consecutive_diff_test.go˝)|
