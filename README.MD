@@ -12,8 +12,8 @@ Leetcode practice using GoLang
 
 |#  | Problem          | Link To Solution                              | Link to Test                                 |
 |:-:| :---             | :-                                            | :-                                           |
-|66| Plus One | [link](pkg/math/66.plus_one.go)| [link](pkg/math/66.plus_one_test.go)|
 |33| Sudoku Solver | [link](pkg/backtracking/33.sudoku_solver.go)| [link](pkg/backtracking/33.sudoku_solver_test.go)|
+|66| Plus One | [link](pkg/math/66.plus_one.go)| [link](pkg/math/66.plus_one_test.go)|
 |86| Partition list | [link](pkg/linkedlist/86.partition_list.go)| [link](pkg/linkedlist/86.partition_list_test.go)|
 |199| Binary Tree Right Side View | [link](pkg/tree/199.binary_tree_right_side_view.go)| [link](pkg/tree/199.binary_tree_right_side_view_test.go)|
 |240| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| [link](pkg/binarysearch/240.search_2d_matrix_ll_test.go)

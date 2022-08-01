@@ -5,34 +5,22 @@ package backtracking
 https://leetcode.com/problems/sudoku-solver/
 */
 func solveSudoku(board [][]byte)  {
-    rows := [9] map[byte]bool {}
-	cols := [9] map[byte]bool {}
-	boxes := [9] map[byte]bool {}
-	solved := false
+	rows,cols,boxes := make([][]bool,9), make([][]bool,9), make([][]bool,9)
+    for i := 0; i < 9; i++{
+        rows[i], cols[i], boxes[i]= make([]bool,9), make([]bool,9), make([]bool,9)
+    }
 
-	for i:=0; i<9; i++ {
-		rows[i] = make(map[byte]bool)
-		cols[i] = make(map[byte]bool)
-		boxes[i] = make(map[byte]bool)
-	}
 	for i:=0; i<9; i++ {
 		for j:=0; j<9; j++ {
 			d := board[i][j]
 			if d == '.' { continue }
-			rows[i][d] = true
-			cols[j][d] = true
+			num := int(d - '0') - 1		
 			boxId := (i / 3) * 3 + j / 3
-			boxes[boxId][d] = true
+			rows[i][num], cols[j][num], boxes[boxId][num]  = true, true, true
 		}
 	}
 
-	isIn := func(m map[byte]bool, b byte) bool {
-		if val, ok := m[b]; ok {
-			return val
-		} else {
-			return false
-		}
-	}
+	solved := false
 	
 	var backtrack func(i int, j int)
 	backtrack = func (i int, j int)  {
@@ -44,26 +32,22 @@ func solveSudoku(board [][]byte)  {
 		newJ := (j + 1) % 9
 		boxId := (i / 3) * 3 + j / 3
 		b := board[i][j]
-		if b != '.' {
-			backtrack(newI, newJ)
-		} else {
-			for k:=1;k<=9;k++ {
-				uK := byte(k + '0')
-				if isIn(rows[i], uK) || isIn(cols[j], uK) || isIn(boxes[boxId], uK) {continue}
+		if b == '.' {
+			for k:=0;k<=8;k++ {
+				if rows[i][k] || cols[j][k] || boxes[boxId][k] {continue}
+				uK := byte(k + '1')
 				board[i][j] = uK
-				rows[i][uK] = true
-				cols[j][uK] = true
-				boxes[boxId][uK] = true
+				rows[i][k], cols[j][k], boxes[boxId][k]  = true, true, true
 				backtrack(newI, newJ)
 				if !solved {
 					board[i][j] = '.'
-					rows[i][uK] = false
-					cols[j][uK] = false
-					boxes[boxId][uK] = false	
+					rows[i][k], cols[j][k], boxes[boxId][k]  = false, false, false
 				} else {
 					return 
 				}
 			} 
+		} else {
+			backtrack(newI, newJ)
 		}
 	}
 
