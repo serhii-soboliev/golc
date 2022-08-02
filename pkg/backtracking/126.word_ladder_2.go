@@ -5,72 +5,64 @@ package backtracking
 https://leetcode.com/problems/word-ladder-ii/
 */
 func findLadders(beginWord string, endWord string, wordList []string) [][]string {
-	found := false
-	for _, w := range wordList {
-		found = found || (w == endWord)
-	}
-	res := [][] string {}
-	if !found { return res}
 	
-	notIn := func(seq []string, s string) bool {
+	contains := func(seq []string, s string) bool {
 		for _, v := range seq {
-			if v == s { return false }
+			if v == s { return true }
 		}
-		return true
+		return false
 	}
-	if notIn(wordList, beginWord) {
+
+	areTransformable := func(a, b string) bool {
+		diff := 0
+		for i := 0; i < len(a); i++ {
+			if a[i] != b[i] {
+				diff++
+			}
+		}
+		return diff == 1
+	}
+
+	if !contains(wordList, endWord) { return [][]string{}}
+
+	if !contains(wordList, beginWord) {
 		wordList = append(wordList, beginWord)
 	}
-	minLength := len(wordList) + 1
-	dict := make(map[string][]string)
 
-	visited := map[string]bool{beginWord: true}
-	for _,v := range wordList {
-		visited[v] = false
-	}
+	dict := make(map[string][]string, len(wordList))
 
-	for _, s1 := range wordList {
-		for _, s2 := range wordList {
-			if len(s1) != len(s2) { continue }
-			dist := 0
-			for i:=0; i<len(s1); i++ {
-				if s1[i] != s2[i] { dist++ }
-			}
-			if dist == 1 {
+	for i, s1 := range wordList {
+		for j := i+1; j<len(wordList); j++ {
+			s2 := wordList[j]
+			if areTransformable(s1, s2) {
 				dict[s1] = append(dict[s1], s2)	
+				dict[s2] = append(dict[s2], s1)	
 			}
 		}
 	}
 
-	var backtrack func(seq []string, current string)
-
-	backtrack = func (seq []string, current string)  {
-		if len(seq) > minLength { return }
-		if current == endWord { 
-			l := len(seq)
-			if l == minLength {
-				res = append(res, seq)
-			}
-			if l < minLength {
-				minLength = l
-				res = [][] string { seq }
-			}
-		} else {
-			for _, v := range dict[current] {
-				if !visited[v] {
-					cpy := make([]string, len(seq))
-					copy(cpy, seq)
-					cpy = append(cpy, v)
-					visited[v] = true
-					backtrack(cpy, v)
-					visited[v] = false
+	queue, result := [][]string{{beginWord}}, [][]string{}
+	pathLen := make(map[string]int, len(wordList))
+	pathLen[beginWord] = 1
+	for len(queue) > 0 && len(result) == 0 {
+		for _, path := range queue {
+			queue = queue[1:]
+			lastWord := path[len(path) - 1]
+			for _, word := range dict[lastWord] {
+				if l, ok := pathLen[word]; ok && l < len(path) + 1 {
+					continue
+				}
+				newPath := append(append(make([]string, 0, len(path)+1), path...), word)
+				if word == endWord {
+					result = append(result, newPath)
+				} else {
+					queue = append(queue, newPath)
+					pathLen[word] = len(newPath)
 				}
 			}
 		}
 	}
-
-	backtrack([]string{beginWord}, beginWord)
-	return res
+	return result
 }
 
 func FindLadders(beginWord string, endWord string, wordList []string) [][]string {
