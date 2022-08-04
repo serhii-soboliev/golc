@@ -19,11 +19,9 @@ func wordBreak(s string, wordDict []string) []string {
 		str := s[startIndex:]
 		for _, w := range wordDict {
 			if w == str { 
-				finalPhrase := fmt.Sprintf("%s %s", phrase, w) 
-				result = append(result, finalPhrase)
+				result = append(result, fmt.Sprintf("%s %s", phrase, w) )
 			} else if strings.HasPrefix(str, w) {
-				newPhrase := fmt.Sprintf("%s %s", phrase, w)
-				backtracking(newPhrase, startIndex + len(w))
+				backtracking(fmt.Sprintf("%s %s", phrase, w), startIndex + len(w))
 			}
 		}
 	}
