@@ -49,60 +49,78 @@ func (t *Trie) StartsWith(prefix string) bool {
 	return true
 }
 
+func (t *Trie) GetSubTrie(r rune) Trie {
+	idx := r - 'a'	
+	return *t.children[idx]
+}
+
 func findWords(board [][]byte, words []string) []string {
 
-	contains := func(i int, j int, a [][]int) bool {
-		for _, v := range a {
-			if v[0] == i && v[1] == j {
-				return true
-			}
-		}
-		return false
-	}
 	n, m := len(board), len(board[0])
 
 	onBoard := func(i, j int) bool {
 		return i >= 0 && i < n && j >=0 && j < m
 	}
 
-	result := [] string {}
+	resWithDuplicates := [] string {}
 	trie := Constructor()
+	for _, word := range words {
+		trie.Insert(word)
+	}
 	
 	directions := [][]int{{-1, 0}, {0, -1}, {1, 0}, {0, 1}}
 
-	var bfs func(i int, j int, visited [][]int, prefix string)
+	var dfs func(subTrie Trie, i int, j int, visited [][]bool, prefix string) []string
 
-	bfs = func(i int, j int, visited [][]int, prefix string) {
-		trie.Insert(prefix)
-		if contains(i, j, visited) {	
-			return
+	dfs = func(subTrie Trie, i int, j int, visited [][]bool, prefix string) []string {
+		subresult := []string{}
+		if subTrie.isEnd {
+			subresult = []string{prefix}
+			subTrie.isEnd = false
 		}
-		b := board[i][j]
-		newPrefix := prefix + string(rune(b))
-		trie.Insert(newPrefix)
+		visited[i][j] = true
+
 		for _, dir := range directions {
-			newI := i + dir[0]
-			newJ := j + dir[1]
-			if onBoard(newI, newJ) {
-				visited = append(visited, []int{i, j})
-				bfs(newI, newJ, visited, newPrefix)
-				visited = visited[:len(visited) - 1]
+			nI := i + dir[0]
+			nJ := j + dir[1]
+
+			if onBoard(nI, nJ) && !visited[nI][nJ] {
+				b := board[nI][nJ]
+				s := string(b)
+			    if subTrie.StartsWith(s) {
+					subresult = append(subresult, 
+						dfs(subTrie.GetSubTrie(rune(b)), nI, nJ, visited, prefix+s )...)
+				}
 			}
 		}
+		visited[i][j] = false
+		return subresult
 	}
 
 	for i:=0; i<n; i++ {
 		for j:=0; j<m; j++ {
-			bfs(i, j, [][]int{}, "")
+			b := board[i][j]
+			s := string(b)
+
+			if !trie.StartsWith(s) { continue }
+
+			visited := make([][]bool, n)
+			for i := range visited {
+				visited[i] = make([]bool, m)
+			}
+
+			resWithDuplicates = append(resWithDuplicates, dfs(trie.GetSubTrie(rune(b)), i, j, visited, s) ...)
 		}
 	}
 
-	for _, word := range words {
-		if trie.Search(word) {
-			result = append(result, word)
-		}
+	resMap := make(map[string]bool) 
+	for _, w := range resWithDuplicates {
+		resMap[w] = true
 	}
-
+	result := []string{}
+	for k := range resMap {
+		result = append(result, k)
+	}
 	return result
 }
 

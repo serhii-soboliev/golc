@@ -21,3 +21,9 @@ func TestFindWords2(t *testing.T) {
 	res := bt.FindWords(board, []string{"abcb"})
 	assert.Empty(t, res)
 }
+
+func TestFindWords3(t *testing.T) {
+	board := [][]byte{{'a','a'}}
+	res := bt.FindWords(board, []string{"a"})
+	assert.ElementsMatch(t, res, []string{"a"} )
+}
