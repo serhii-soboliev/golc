@@ -19,6 +19,7 @@ Leetcode practice using GoLang
 |140| Word Break II | [link](pkg/backtracking/140.word_break_2.go)| Backtracking|
 |199| Binary Tree Right Side View | [link](pkg/tree/199.binary_tree_right_side_view.go)| Binary Tree|
 |208| Trie(Prefix tree) | [link](pkg/datastructures/trie/208.trie.go)| Trie|
+|208| Word Search 2 | [link](pkg/backtracking/212.word_search_2.go)| Backtracking |
 |240| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |
 |242| Valid Anagram | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |
 |377| Combination Sum IV | [link](pkg/dynamicprogramming/377.combination_sum_4.go)| DP |
