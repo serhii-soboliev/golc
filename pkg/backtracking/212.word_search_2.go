@@ -5,60 +5,68 @@ package backtracking
 https://leetcode.com/problems/word-search-ii/
 */
 type Trie struct {
-	children [26]*Trie
-	isEnd    bool
-	word 	 string
+    children map[byte]*Trie
+    word     string
 }
 
-func buildTrie(words []string) *Trie {
-    root := &Trie{}
-    for _, word := range words {
-        tmp := root
-        for _, c := range word {
-            i := c - 'a'
-            if tmp.children[i] == nil { tmp.children[i] = &Trie{} }
-            tmp = tmp.children[i]
+func (t *Trie) Insert(word string) {
+    node := t
+    for i := range word {
+        ch := word[i]
+        if node.children[ch] == nil {
+            node.children[ch] = &Trie{children: map[byte]*Trie{}}
         }
-        tmp.isEnd = true
-		tmp.word = word
+        node = node.children[ch]
     }
-    return root
+    node.word = word
 }
 
-func findWords(board [][]byte, words []string) []string {
-	root := buildTrie(words)
-	result := []string{}
+func findWords(board [][]byte, words []string) (ans []string) {
+	var dirs = []struct{ x, y int }{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
+    t := &Trie{children: map[byte]*Trie{}}
+    for _, word := range words {
+        t.Insert(word)
+    }
 
-	var floodFill func(board [][]byte, root *Trie, i, j int) 
+    m, n := len(board), len(board[0])
 
-	floodFill = func(board [][]byte, root *Trie, i, j int) {
-		if i < 0 || i >= len(board) || j < 0 || j >= len(board[0]) { return }
-		tmp := board[i][j]
-		if tmp == '$' || root.children[tmp - 'a'] == nil { return }
-		root = root.children[tmp - 'a']
-		if root.isEnd { 
-			result = append(result, root.word); 
-			root.word = "" 
-			root.isEnd = false
-		}
-		board[i][j] = '$'
-		floodFill(board, root, i + 1, j)
-		floodFill(board, root, i - 1, j)
-		floodFill(board, root, i, j + 1)
-		floodFill(board, root, i, j - 1)
-		board[i][j] = tmp
-	}
+    var floodFill func(node *Trie, x, y int)
+    floodFill = func(node *Trie, x, y int) {
+        ch := board[x][y]
+        nxt := node.children[ch]
+        if nxt == nil {
+            return
+        }
 
-	n,m := len(board), len(board[0])
-	for i:=0; i<n; i++ {
-		for j:=0; j<m; j++ {
-			floodFill(board, root, i, j)
-		}
-	}
-	
-	return result
-	
+        if nxt.word != "" {
+            ans = append(ans, nxt.word)
+            nxt.word = ""
+        }
+
+        if len(nxt.children) > 0 {
+            board[x][y] = '#'
+            for _, d := range dirs {
+                nx, ny := x+d.x, y+d.y
+                if 0 <= nx && nx < m && 0 <= ny && ny < n && board[nx][ny] != '#' {
+                    floodFill(nxt, nx, ny)
+                }
+            }
+            board[x][y] = ch
+        }
+        
+        if len(nxt.children) == 0 {
+            delete(node.children, ch)
+        }
+    }
+    for i, row := range board {
+        for j := range row {
+            floodFill(t, i, j)
+        }
+    }
+
+    return
 }
+
 
 func FindWords(board [][]byte, words []string) []string {
 	return findWords(board, words)
