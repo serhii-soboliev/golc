@@ -2,6 +2,7 @@ package backtracking
 
 import (
 	"fmt"
+	"strconv"
 )
 
 /*
@@ -10,6 +11,43 @@ https://leetcode.com/problems/expression-add-operators/
 */
 
 func addOperators(num string, target int) []string {
+    result := []string{}
+    
+    var backtrack func(string, string, int, int)
+    
+    backtrack = func(suffix, path string, val, last int) {
+        if len(suffix) == 0 {
+            if val == target {
+                result = append(result, path)
+            }
+            return
+        }
+        
+        for i := 1; i <= len(suffix); i++ {
+            str := suffix[:i]
+            digit, _ := strconv.Atoi(str)
+            
+            if str[0] == '0'&& len(str) > 1 {
+                continue
+            }
+            
+			// for the first call
+            if path == "" {
+                backtrack(suffix[i:], str, digit, digit)
+            } else {
+                backtrack(suffix[i:], path + "+" + str, val + digit, digit)
+                backtrack(suffix[i:], path + "-" + str, val - digit, -digit)
+                backtrack(suffix[i:], path + "*" + str, val - last + last * digit, last * digit)
+            }
+        }
+    }
+    
+    backtrack(num, "", 0, 0)
+    
+    return result
+}
+
+func addOperators1(num string, target int) []string {
 	result := [] string {}
 	n := len(num)
 
@@ -55,4 +93,8 @@ func addOperators(num string, target int) []string {
 
 func AddOperators(num string, target int) []string {
 	return addOperators(num, target)
+}
+
+func AddOperators1(num string, target int) []string {
+	return addOperators1(num, target)
 }
