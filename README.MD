@@ -21,10 +21,11 @@ Leetcode practice using GoLang
 |208| Trie(Prefix tree) | [link](pkg/datastructures/trie/208.trie.go)| Trie|
 |208| Word Search 2 | [link](pkg/backtracking/212.word_search_2.go)| Backtracking |
 |240| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |
-|242| Valid Anagram | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |
+|242| Valid Anagram | [link](pkg/string/242.valid_anagram.go)| Binary Search |
+|282| Expression And Operators| [link](pkg/backtracking/282.expression_add_operators.go)| Backtracking |
 |377| Combination Sum IV | [link](pkg/dynamicprogramming/377.combination_sum_4.go)| DP |
 |458| Poor Pigs | [link](pkg/math/458.poor_pigs.go)| Math |
-|491| Valid Anagram | [link](pkg/string/242.valid_anagram.go)| String|
+|491| Increasing Subsequences| [link](pkg/backtracking/491.increasing_subsequences.go)| String|
 |494| Target Sum | [link](pkg/backtracking/494.target_sum.go)| Backtracking|
 |526| Beautiful Arrangement | [link](pkg/backtracking/526.beautiful_arrangement.go)| Backtracking|
 |638| Shopping Offers  | [link](pkg/backtracking/638.shopping_offers.go)| Backtracking|
