@@ -13,13 +13,11 @@ func addOperators(num string, target int) []string {
 	result := [] string {}
 	n := len(num)
 
-	var backtrack func(idx int, prevOperand int64,
-							 currentOperand int64, 
-							 value int64, ops []string)
+	var backtrack func(idx int, prevO int,currO int, value int, ops []string)
 	
-	backtrack = func(idx int, prevOperand, currentOperand, value int64, ops []string) {
+	backtrack = func(idx int, prevO, currO, value int, ops []string) {
 		if idx == n {
-			if value == int64(target) && currentOperand == 0 {
+			if value == int(target) && currO == 0 {
 				subresult := ""
 				for j:=1;j<len(ops);j++ {
 					subresult += ops[j]
@@ -28,31 +26,26 @@ func addOperators(num string, target int) []string {
 			}
 			return
 		}
-		idxChar := rune(num[idx]) - '0'
-		currentOperand = currentOperand*10 + int64(idxChar)
-		strCurentOperand := fmt.Sprint(currentOperand)
+		currO = currO*10 + int(num[idx] - '0')
+		strCurrO := fmt.Sprint(currO)
 
-		if currentOperand > 0 {
-			backtrack(idx + 1, prevOperand, currentOperand, value, ops)
+		if currO > 0 {
+			backtrack(idx + 1, prevO, currO, value, ops)
 		}
 
-		ops = append(ops, "+")
-		ops = append(ops, strCurentOperand)
-		backtrack(idx + 1, currentOperand, 0, value + currentOperand, ops)
-		ops = ops[:len(ops) - 2]
+		opsLen := len(ops)
+		ops = append(ops, "+", strCurrO)
+		backtrack(idx + 1, currO, 0, value + currO, ops)
+		ops = ops[:opsLen]
 
 		if len(ops) > 0 {
-			ops = append(ops, "-")
-			ops = append(ops, strCurentOperand)
-			backtrack(idx + 1, -currentOperand, 0, 
-				value - currentOperand, ops)
-			ops = ops[:len(ops) - 2]
+			ops = append(ops,"-", strCurrO)
+			backtrack(idx + 1, -currO, 0, value - currO, ops)
+			ops = ops[:opsLen]
 
-			ops = append(ops, "*")
-			ops = append(ops, strCurentOperand)
-			backtrack(idx + 1, prevOperand * currentOperand, 0,
-				value - prevOperand + (currentOperand * prevOperand), ops)
-			ops = ops[:len(ops) - 2]
+			ops = append(ops, "*", strCurrO)
+			backtrack(idx + 1, prevO * currO, 0, value - prevO + (currO * prevO), ops)
+			ops = ops[:opsLen]
 		}
 	}	
 
