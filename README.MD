@@ -33,6 +33,7 @@ Leetcode practice using GoLang
 |784| Letter Case Permutation  | [link](pkg/backtracking/784.letter_case_permutation.go)| Backtracking |
 |792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| String|
 |816| Ambiguous Coordinates | [link](pkg/backtracking/816.ambiguous_coordinates.go)| Backtracking|
+|823| Binary Trees With Factors | [link](pkg/dynamicprogramming/823.binary_trees_with_factors.go)| DP|
 |842| Split Array into Fibonacci Sequence | [link](pkg/backtracking/842.split_array_into_fibonacci_sequence.go)| Backtracking|
 |858| Mirror Reflection| [link](pkg/math/858.mirror_reflection.go)| Math|
 |890| Find and Replace Pattern| [link](pkg/string/890.find_and_replace_pattern.go)| String|
