@@ -12,6 +12,7 @@ Leetcode practice using GoLang
 
 |#  | Problem          | Link To Solution                              | Method               |
 |:-:| :---             | :-                                            | :-                   |
+|2| Add Two Numbers | [link](pkg/linkedlist/2.add_two_numbers.go)| Linked List|
 |33| Sudoku Solver | [link](pkg/backtracking/33.sudoku_solver.go)| Backtracking|
 |66| Plus One | [link](pkg/math/66.plus_one.go)| Math |
 |86| Partition list | [link](pkg/linkedlist/86.partition_list.go)| Linked List|
