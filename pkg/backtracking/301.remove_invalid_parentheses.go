@@ -4,28 +4,9 @@ package backtracking
 301. Remove Invalid Parentheses
 https://leetcode.com/problems/remove-invalid-parentheses/
 */
-type Set struct {
-	m map[string]bool
-}
-
-func (set *Set) Add(s string) {
-	set.m[s] = true
-}
-
-func (set *Set) Reset() {
-	set.m = make(map[string]bool)
-}
-
-func (set *Set) ToSlice() []string {
-	result := []string{}
-	for k := range set.m {
-		result = append(result, k)	
-	}
-	return result	
-}
 
 func removeInvalidParentheses(s string) []string {
-	resMap := Set { m: make(map[string]bool) }
+	result := NewSet[string]()
 	n := len(s)
 	removeMinimum := n + 1 
 
@@ -39,9 +20,12 @@ func removeInvalidParentheses(s string) []string {
 			if leftCount == rightCount {
 				if removeCount < removeMinimum {
 					removeMinimum = removeCount
-					resMap.Reset()
-				} 
-				resMap.Add(currentExpression)
+					result.Reset() 
+					result.Add(currentExpression)
+				}  else if removeCount == removeMinimum {
+					result.Add(currentExpression)
+				}
+				
 			}
 			return
 		}
@@ -60,7 +44,31 @@ func removeInvalidParentheses(s string) []string {
 
 	backtracking(0, 0, 0, 0, "")
 
-	return resMap.ToSlice()
+	return result.ToSlice()
+}
+
+type Set[T comparable] struct {
+	m map[T]bool
+}
+
+func (set *Set[T]) Add(s T) {
+	set.m[s] = true
+}
+
+func (set *Set[T]) Reset() {
+	set.m = make(map[T]bool)
+}
+
+func (set *Set[T]) ToSlice() []T {
+	result := []T{}
+	for k := range set.m {
+		result = append(result, k)	
+	}
+	return result	
+}
+
+func NewSet[T comparable]() Set[T] {
+	return Set[T]{ m: make(map[T]bool) }
 }
 
 func RemoveInvalidParentheses(s string) []string {
