@@ -23,6 +23,7 @@ Leetcode practice using GoLang
 |240| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |
 |242| Valid Anagram | [link](pkg/string/242.valid_anagram.go)| Binary Search |
 |282| Expression And Operators| [link](pkg/backtracking/282.expression_add_operators.go)| Backtracking |
+|301| Remove Invalid Parentheses| [link](pkg/backtracking/301.remove_invalid_parentheses.go)| Backtracking |
 |377| Combination Sum IV | [link](pkg/dynamicprogramming/377.combination_sum_4.go)| DP |
 |458| Poor Pigs | [link](pkg/math/458.poor_pigs.go)| Math |
 |491| Increasing Subsequences| [link](pkg/backtracking/491.increasing_subsequences.go)| String|
