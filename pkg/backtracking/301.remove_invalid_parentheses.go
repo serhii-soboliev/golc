@@ -4,19 +4,30 @@ package backtracking
 301. Remove Invalid Parentheses
 https://leetcode.com/problems/remove-invalid-parentheses/
 */
+type Set struct {
+	m map[string]bool
+}
+
+func (set *Set) Add(s string) {
+	set.m[s] = true
+}
+
+func (set *Set) Reset() {
+	set.m = make(map[string]bool)
+}
+
+func (set *Set) ToSlice() []string {
+	result := []string{}
+	for k := range set.m {
+		result = append(result, k)	
+	}
+	return result	
+}
 
 func removeInvalidParentheses(s string) []string {
-	resMap := make(map[string]bool)
+	resMap := Set { m: make(map[string]bool) }
 	n := len(s)
 	removeMinimum := n + 1 
-
-	isOpenPar := func(s string) bool {
-		return s == "("
-	}
-
-	isClosePar := func(s string) bool {
-		return s == ")"
-	}
 
 	var backtracking func(idx int, leftCount int, rightCount int, removeCount int, currentExpression string) 
     
@@ -28,18 +39,17 @@ func removeInvalidParentheses(s string) []string {
 			if leftCount == rightCount {
 				if removeCount < removeMinimum {
 					removeMinimum = removeCount
-					resMap = map[string]bool{currentExpression:true}
-				} else if removeCount == removeMinimum {
-					resMap[currentExpression] = true
-				}
+					resMap.Reset()
+				} 
+				resMap.Add(currentExpression)
 			}
 			return
 		}
 		curSymbol := string(rune(s[idx]))
 		newCurrentExpression := currentExpression + curSymbol
-		if !isOpenPar(curSymbol) && !isClosePar(curSymbol) {
+		if curSymbol != "(" && curSymbol != ")" {
 			backtracking(idx + 1, leftCount, rightCount, removeCount, newCurrentExpression)
-		} else if isOpenPar(curSymbol) {
+		} else if curSymbol == "(" {
 			backtracking(idx + 1, leftCount+1, rightCount, removeCount, newCurrentExpression)	
 			backtracking(idx + 1, leftCount, rightCount, removeCount+1, currentExpression)	
 		} else {
@@ -49,11 +59,8 @@ func removeInvalidParentheses(s string) []string {
 	}
 
 	backtracking(0, 0, 0, 0, "")
-	result := []string{}
-	for k := range resMap {
-		result = append(result, k)	
-	}
-	return result
+
+	return resMap.ToSlice()
 }
 
 func RemoveInvalidParentheses(s string) []string {

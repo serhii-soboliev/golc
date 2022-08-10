@@ -7,6 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+
 func TestRemoveInvalidParentheses1(t *testing.T) {
 	res := bt.RemoveInvalidParentheses("()())()")
 	assert.ElementsMatch(t, res, []string{"(())()","()()()"} )
