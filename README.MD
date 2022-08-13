@@ -14,6 +14,7 @@ Leetcode practice using GoLang
 |:-:| :---             | :-                                            | :-                   |
 |2| Add Two Numbers | [link](pkg/linkedlist/2.add_two_numbers.go)| Linked List|
 |5| Longest Palindromic Substring | [link](pkg/string/5.longest_palindromic_substring.go)| String|
+|30| Substring with Concatenation of All Words | [link](pkg/string/30.substring_with_concatenation_of_all_words.go)| String|
 |33| Sudoku Solver | [link](pkg/backtracking/33.sudoku_solver.go)| Backtracking|
 |66| Plus One | [link](pkg/math/66.plus_one.go)| Math |
 |86| Partition list | [link](pkg/linkedlist/86.partition_list.go)| Linked List|
