@@ -50,25 +50,21 @@ func findSubstringMap(s string, words []string) []int {
 func findSubstringSlidingWindow(s string, words []string) []int {
 	dict := make(map[string]int)
 	for _, word := range words {
-		if v, ok := dict[word]; ok {
-			dict[word] = v + 1
-		} else {
-			dict[word] = 1
-		}
+		dict[word] += 1
 	}
 
-	wordLen := len(words[0])
-	wordsCount := len(words)
+	wordLen, wordsCount := len(words[0]), len(words)
 	substringSize := wordsCount * wordLen
 	result := []int{}
 
 	slidingWindow := func(left int) {
-		wordsFound := make(map[string]int)
-		excessWord := false
-		wordsUsed := 0
+		wordsFound, excessWord, wordsUsed := make(map[string]int), false, 0
+
 		for right := left; right + wordLen <= len(s); right += wordLen {
 			sub := s[right:right+wordLen]
-			if v1, ok1 := dict[sub]; ok1 {
+			if v, ok1 := dict[sub]; !ok1 {
+				wordsFound, excessWord, wordsUsed, left = make(map[string]int), false, 0, right + wordLen				
+			} else {
 				for right - left == substringSize || excessWord {
 					leftmostWord := s[left:left+wordLen]
 					left += wordLen
@@ -79,12 +75,10 @@ func findSubstringSlidingWindow(s string, words []string) []int {
 						wordsUsed -= 1
 					}
 				}
-				if v2, ok2 := wordsFound[sub]; ok2 {
-					wordsFound[sub] = v2 + 1
-				} else {
-					wordsFound[sub] = 1	
-				}
-				if wordsFound[sub] <= v1 {
+
+				wordsFound[sub] += 1
+
+				if wordsFound[sub] <= v {
 					wordsUsed += 1
 				} else {
 					excessWord = true
@@ -92,11 +86,6 @@ func findSubstringSlidingWindow(s string, words []string) []int {
 				if wordsUsed == wordsCount && !excessWord {
 					result = append(result, left)
 				}
-			} else {
-				wordsFound = make(map[string]int)
-				excessWord = false
-				wordsUsed = 0
-				left = right + wordLen
 			}
 		}	
 	}
