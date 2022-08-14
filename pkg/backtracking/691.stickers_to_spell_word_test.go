@@ -22,3 +22,7 @@ func TestMinStickers3(t *testing.T) {
 func TestMinStickers4(t *testing.T) {
 	assert.Equal(t, 7, bt.MinStickers([]string{"bring","plane","should","against","chick"}, "greatscore"))
 }
+
+func TestMinStickers5(t *testing.T) {
+	assert.Equal(t, 3, bt.MinStickers([]string{"city","would","feel","effect","cell","paint"}, "putcat"))
+}

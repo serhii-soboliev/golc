@@ -17,14 +17,15 @@ func runeHistogram(s string) []rune {
 	return result 
 }
 
-func moreValuable(k int, n int, historgram [][]rune) bool {
-	for i:=0; i<26; i++ {
+func moreValuable(k int, n int, historgram [][]rune, target string) bool {
+	for _, r := range target {
+		i := r - 'a'
 		if historgram[n][i] > historgram[k][i] { return false }
 	}
 	return true
 }
 
-func getFilteredStickersRuneHistogram(stickers []string) [][]rune {
+func buildStickersLetterHistogram(stickers []string, target string) [][]rune {
 	stickersCount := len(stickers)
 	primaryRuneHistogram := make([][]rune, stickersCount)
 	for i, sticker := range stickers {
@@ -33,8 +34,8 @@ func getFilteredStickersRuneHistogram(stickers []string) [][]rune {
 	notValuableStickers := make(map[int]bool)
 	for i:=0; i<stickersCount; i++ {
 		for j:=0; j<stickersCount; j++ {
-			if i == j { continue }
-			if moreValuable(i, j, primaryRuneHistogram) { 
+			if _, ok := notValuableStickers[i]; ok || i == j { continue }
+			if moreValuable(i, j, primaryRuneHistogram, target) { 
 				notValuableStickers[j] = true
 			}	
 		}
@@ -51,7 +52,7 @@ func getFilteredStickersRuneHistogram(stickers []string) [][]rune {
 
 func minStickers(stickers []string, target string) int {
 	minUsedStickersNumber := math.MaxInt32
-	stickersRuneHistogram := getFilteredStickersRuneHistogram(stickers)
+	stickersRuneHistogram := buildStickersLetterHistogram(stickers, target)
 	stickersCount := len(stickersRuneHistogram)
 
 	var backtracking func(int, []rune, int) 
