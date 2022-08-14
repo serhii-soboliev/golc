@@ -9,17 +9,20 @@ import (
 https://leetcode.com/problems/stickers-to-spell-word/
 */
 
+var LETTERS_COUNT = 26
+var START_LETTER = 'a'
+
 func runeHistogram(s string) []rune {
-	result := make([]rune, 26)
+	result := make([]rune, LETTERS_COUNT)
 	for _, r := range s {
-		result[r - 'a'] += 1
+		result[r - START_LETTER] += 1
 	}
 	return result 
 }
 
 func moreValuable(k int, n int, historgram [][]rune, target string) bool {
 	for _, r := range target {
-		i := r - 'a'
+		i := r - START_LETTER
 		if historgram[n][i] > historgram[k][i] { return false }
 	}
 	return true
@@ -63,7 +66,7 @@ func minStickers(stickers []string, target string) int {
 			if minUsedStickersNumber > usedStickersNumber { minUsedStickersNumber = usedStickersNumber}
 			return
 		} 
-		rIdx := rune(target[idx]) - 'a'
+		rIdx := rune(target[idx]) - START_LETTER
 		if availableHistogram[rIdx] > 0  {
 			availableHistogram[rIdx] -= 1
 			backtracking(idx + 1, availableHistogram, usedStickersNumber)
@@ -71,18 +74,18 @@ func minStickers(stickers []string, target string) int {
 		} else {
 			for i:=0; i<stickersCount; i++ {
 				if stickersRuneHistogram[i][rIdx] == 0 { continue }
-				for j:=0; j<26; j++ {
+				for j:=0; j<LETTERS_COUNT; j++ {
 					availableHistogram[j] += stickersRuneHistogram[i][j]
 				}
 				backtracking(idx, availableHistogram, usedStickersNumber + 1)
-				for j:=0; j<26; j++ {
+				for j:=0; j<LETTERS_COUNT; j++ {
 					availableHistogram[j] -= stickersRuneHistogram[i][j]
 				}
 			}
 		}
 	}
 	
-	backtracking(0, make([]rune, 26), 0)
+	backtracking(0, make([]rune, LETTERS_COUNT), 0)
 
 	if minUsedStickersNumber == math.MaxInt32 {	return -1} 
 	return minUsedStickersNumber
