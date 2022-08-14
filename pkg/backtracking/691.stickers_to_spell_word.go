@@ -2,7 +2,6 @@ package backtracking
 
 import (
 	"math"
-	"strings"
 )
 
 /*
@@ -10,36 +9,79 @@ import (
 https://leetcode.com/problems/stickers-to-spell-word/
 */
 
+func runeHistogram(s string) []rune {
+	result := make([]rune, 26)
+	for _, r := range s {
+		result[r - 'a'] += 1
+	}
+	return result 
+}
+
+func moreValuable(k int, n int, historgram [][]rune) bool {
+	for i:=0; i<26; i++ {
+		if historgram[n][i] > historgram[k][i] { return false }
+	}
+	return true
+}
+
+func getFilteredStickersRuneHistogram(stickers []string) [][]rune {
+	stickersCount := len(stickers)
+	primaryRuneHistogram := make([][]rune, stickersCount)
+	for i, sticker := range stickers {
+		primaryRuneHistogram[i] = runeHistogram(sticker)
+	}
+	notValuableStickers := make(map[int]bool)
+	for i:=0; i<stickersCount; i++ {
+		for j:=0; j<stickersCount; j++ {
+			if i == j { continue }
+			if moreValuable(i, j, primaryRuneHistogram) { 
+				notValuableStickers[j] = true
+			}	
+		}
+	}
+
+	stickersRuneHistogram := [][]rune{}
+	for i:=0; i<stickersCount; i++ {
+		if _, ok := notValuableStickers[i]; !ok {
+			stickersRuneHistogram = append(stickersRuneHistogram, primaryRuneHistogram[i])
+		}
+	}
+	return stickersRuneHistogram
+}
+
 func minStickers(stickers []string, target string) int {
-	targetSymbolsMap := make(map[rune]int)
-	for _, r := range target { targetSymbolsMap[r] += 1 }
 	minUsedStickersNumber := math.MaxInt32
+	stickersRuneHistogram := getFilteredStickersRuneHistogram(stickers)
+	stickersCount := len(stickersRuneHistogram)
 
-	var backtracking func(int, map[rune]int, int) 
+	var backtracking func(int, []rune, int) 
 
-	backtracking = func(idx int, availableSymbolsMap map[rune]int, usedStickersNumber int) {
+	backtracking = func(idx int, availableHistogram []rune, usedStickersNumber int) {
+		if usedStickersNumber > minUsedStickersNumber { return }
 		if idx == len(target) {
 			if minUsedStickersNumber > usedStickersNumber { minUsedStickersNumber = usedStickersNumber}
 			return
 		} 
-		r := rune(target[idx])
-		if targetSymbolsMap[r] <= availableSymbolsMap[r] {
-			backtracking(idx + 1, availableSymbolsMap, usedStickersNumber)
-		} else if usedStickersNumber + 1 < minUsedStickersNumber {
-			for _, sticker := range stickers {
-				if !strings.Contains(sticker, string(r)) { continue }
-				for _, s := range sticker {
-					availableSymbolsMap[s] += 1
+		rIdx := rune(target[idx]) - 'a'
+		if availableHistogram[rIdx] > 0  {
+			availableHistogram[rIdx] -= 1
+			backtracking(idx + 1, availableHistogram, usedStickersNumber)
+			availableHistogram[rIdx] += 1
+		} else {
+			for i:=0; i<stickersCount; i++ {
+				if stickersRuneHistogram[i][rIdx] == 0 { continue }
+				for j:=0; j<26; j++ {
+					availableHistogram[j] += stickersRuneHistogram[i][j]
 				}
-				backtracking(idx, availableSymbolsMap, usedStickersNumber + 1)
-				for _, s := range sticker {
-					availableSymbolsMap[s] -= 1
+				backtracking(idx, availableHistogram, usedStickersNumber + 1)
+				for j:=0; j<26; j++ {
+					availableHistogram[j] -= stickersRuneHistogram[i][j]
 				}
 			}
 		}
 	}
 	
-	backtracking(0, make(map[rune]int), 0)
+	backtracking(0, make([]rune, 26), 0)
 
 	if minUsedStickersNumber == math.MaxInt32 {	return -1} 
 	return minUsedStickersNumber

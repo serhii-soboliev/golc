@@ -34,6 +34,7 @@ Leetcode practice using GoLang
 |526| Beautiful Arrangement | [link](pkg/backtracking/526.beautiful_arrangement.go)| Backtracking|
 |638| Shopping Offers  | [link](pkg/backtracking/638.shopping_offers.go)| Backtracking|
 |679| 24 Game  | [link](pkg/backtracking/679.24_game.go)| Backtracking|
+|691| Stickers to Spell Word | [link](pkg/backtracking/691.stickers_to_spell_word.go)| Backtracking|
 |698| Partition to K Equal Sum Subsets  | [link](pkg/backtracking/698.partition_k_equal_sum_subsets.go)| Backtracking |
 |784| Letter Case Permutation  | [link](pkg/backtracking/784.letter_case_permutation.go)| Backtracking |
 |792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| String|
