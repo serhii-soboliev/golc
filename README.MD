@@ -44,5 +44,7 @@ Leetcode practice using GoLang
 |858| Mirror Reflection| [link](pkg/math/858.mirror_reflection.go)| Math|
 |890| Find and Replace Pattern| [link](pkg/string/890.find_and_replace_pattern.go)| String|
 |967| Numbers With Same Consecutive Differences| [link](pkg/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
+|967| Numbers With Same Consecutive Differences| [link](pkg/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
+|980| Unique Paths III| [link](pkg/backtracking/980.unique_paths_III.go)| Backtracking|
 |1220| Count Vowels Permutation| [link](pkg/dynamicprogramming/1220.count_vowels_permutation.go)| DP|
 |2364| Count Number of Bad Pairs| [link](pkg/hashmap/2364.count_number_of_bad_pairs.go)| HashMap|
