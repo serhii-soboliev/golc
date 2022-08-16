@@ -1,6 +1,9 @@
 package backtracking
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 /*
 996. Number of Squareful Arrays
@@ -9,8 +12,9 @@ https://leetcode.com/problems/number-of-squareful-arrays/
 
 func numSquarefulPerms(nums []int) int {
 	n := len(nums)
+	sort.Ints(nums)
 
-	squarefulPerms := make(map[string]struct{})
+	squarefulPermsCount := 0
 	usedPerms := make(map[string]struct{})
 
 	toString := func(a []int) string {
@@ -45,8 +49,7 @@ func numSquarefulPerms(nums []int) int {
 		usedPerms[p] = struct{}{}
 		l := len(a)
 		if len(a) == n { 
-			squarefulPerms[p] = struct{}{}
-			return
+			squarefulPermsCount += 1
 		} 
 		for i, v := range(nums) {
 			if u[i] == 1 { continue }
@@ -60,7 +63,7 @@ func numSquarefulPerms(nums []int) int {
 	}
 
 	backtrack([] int {}, make([]byte, n))
-	return len(squarefulPerms)
+	return squarefulPermsCount
 }
 
 func NumSquarefulPerms(nums []int) int {
