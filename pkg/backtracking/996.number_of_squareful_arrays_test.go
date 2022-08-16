@@ -18,3 +18,12 @@ func TestNumSquarefulPerms2(t *testing.T)  {
 func TestNumSquarefulPerms3(t *testing.T)  {
 	assert.Equal(t, 1, bt.NumSquarefulPerms([]int{2,2,2,2,2,2,2,2,2,2}))
 }
+
+func TestNumSquarefulPerms4(t *testing.T)  {
+	assert.Equal(t, 4, bt.NumSquarefulPerms([]int{0,0,0,1,1,1}))
+}
+
+func TestNumSquarefulPerms5(t *testing.T)  {
+	assert.Equal(t, 1, bt.NumSquarefulPerms([]int{0,0,0}))
+}
+

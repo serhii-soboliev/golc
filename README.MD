@@ -46,5 +46,6 @@ Leetcode practice using GoLang
 |967| Numbers With Same Consecutive Differences| [link](pkg/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
 |967| Numbers With Same Consecutive Differences| [link](pkg/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
 |980| Unique Paths III| [link](pkg/backtracking/980.unique_paths_III.go)| Backtracking|
+|996| Number of Squareful Arrays| [link](pkg/backtracking/996.number_of_squareful_arrays.go)| Backtracking|
 |1220| Count Vowels Permutation| [link](pkg/dynamicprogramming/1220.count_vowels_permutation.go)| DP|
 |2364| Count Number of Bad Pairs| [link](pkg/hashmap/2364.count_number_of_bad_pairs.go)| HashMap|
