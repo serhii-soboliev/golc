@@ -25,6 +25,17 @@ func numSquarefulPerms(nums []int) int {
 		return res
 	}
 
+	isUsed := func(a []int) bool {
+		p := toString(a)
+		_, ok := usedPerms[p]
+		return ok	
+	}
+
+	markAsUsed := func(a []int) {
+		p := toString(a)
+		usedPerms[p] = struct{}{}	
+	}
+
 	isPerfectSquare := func(a, b int) bool {
 		x := a + b
 		lo, hi := 0, x
@@ -44,12 +55,12 @@ func numSquarefulPerms(nums []int) int {
 	var backtrack func ([]int, []byte)
 
 	backtrack = func(a []int, u []byte) {
-		p := toString(a)
-		if _, ok := usedPerms[p]; ok { return }
-		usedPerms[p] = struct{}{}
+		if isUsed(a) { return }
+		markAsUsed(a)
 		l := len(a)
 		if len(a) == n { 
 			squarefulPermsCount += 1
+			return
 		} 
 		for i, v := range(nums) {
 			if u[i] == 1 { continue }
