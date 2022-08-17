@@ -139,6 +139,6 @@ func BraceExpansionBFSII(expression string) []string {
 	return braceExpansionBFSII(expression)
 }
 
-func BraceExpansion´RecII(expression string) []string {
+func BraceExpansionRecII(expression string) []string {
 	return braceExpansionRecII(expression)
 }
