@@ -38,6 +38,7 @@ Leetcode practice using GoLang
 |698| Partition to K Equal Sum Subsets  | [link](pkg/backtracking/698.partition_k_equal_sum_subsets.go)| Backtracking |
 |784| Letter Case Permutation  | [link](pkg/backtracking/784.letter_case_permutation.go)| Backtracking |
 |792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| String|
+|804| Unique Morse Code Words | [link](pkg/string/804.unique_morse_code_words.go)| HashTable|
 |816| Ambiguous Coordinates | [link](pkg/backtracking/816.ambiguous_coordinates.go)| Backtracking|
 |823| Binary Trees With Factors | [link](pkg/dynamicprogramming/823.binary_trees_with_factors.go)| DP|
 |842| Split Array into Fibonacci Sequence | [link](pkg/backtracking/842.split_array_into_fibonacci_sequence.go)| Backtracking|
@@ -47,5 +48,6 @@ Leetcode practice using GoLang
 |967| Numbers With Same Consecutive Differences| [link](pkg/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
 |980| Unique Paths III| [link](pkg/backtracking/980.unique_paths_III.go)| Backtracking|
 |996| Number of Squareful Arrays| [link](pkg/backtracking/996.number_of_squareful_arrays.go)| Backtracking|
+|1096| Brace Expansion II| [link](pkg/bfs/1096.brace_expansion_II.go)| BFS |
 |1220| Count Vowels Permutation| [link](pkg/dynamicprogramming/1220.count_vowels_permutation.go)| DP|
 |2364| Count Number of Bad Pairs| [link](pkg/hashmap/2364.count_number_of_bad_pairs.go)| HashMap|
