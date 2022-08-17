@@ -7,14 +7,26 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestBraceExpansionII1(t *testing.T) {
-	assert.Equal(t, 
-		[]string{"ac","ad","ae","bc","bd","be"},
-		bfs.BraceExpansionII("{a,b}{c,{d,e}}"))
+func TestBraceExpansionBFSII1(t *testing.T) {
+	assert.Equal(t,
+		[]string{"ac", "ad", "ae", "bc", "bd", "be"},
+		bfs.BraceExpansionBFSII("{a,b}{c,{d,e}}"))
 }
 
-func TestBraceExpansionII2(t *testing.T) {
-	assert.Equal(t, 
-		[]string{"a","ab","ac","z"},
-		bfs.BraceExpansionII("{{a,z},a{b,c},{ab,z}}"))
+func TestBraceExpansionBFSII2(t *testing.T) {
+	assert.Equal(t,
+		[]string{"a", "ab", "ac", "z"},
+		bfs.BraceExpansionBFSII("{{a,z},a{b,c},{ab,z}}"))
+}
+
+func TestBraceExpansionRecursionII1(t *testing.T) {
+	assert.Equal(t,
+		[]string{"ac", "ad", "ae", "bc", "bd", "be"},
+		bfs.BraceExpansionRecII("{a,b}{c,{d,e}}"))
+}
+
+func TestBraceExpansionRecursionII2(t *testing.T) {
+	assert.Equal(t,
+		[]string{"a", "ab", "ac", "z"},
+		bfs.BraceExpansionRecII("{{a,z},a{b,c},{ab,z}}"))
 }
