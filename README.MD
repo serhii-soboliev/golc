@@ -33,6 +33,7 @@ Leetcode practice using GoLang
 |494| Target Sum | [link](pkg/backtracking/494.target_sum.go)| Backtracking|
 |526| Beautiful Arrangement | [link](pkg/backtracking/526.beautiful_arrangement.go)| Backtracking|
 |638| Shopping Offers  | [link](pkg/backtracking/638.shopping_offers.go)| Backtracking|
+|659| Split Array into Consecutive Subsequences  | [link](pkg/greedy/659.split_array_into_consecutive_subsequences.go)| Greedy|
 |679| 24 Game  | [link](pkg/backtracking/679.24_game.go)| Backtracking|
 |691| Stickers to Spell Word | [link](pkg/backtracking/691.stickers_to_spell_word.go)| Backtracking|
 |698| Partition to K Equal Sum Subsets  | [link](pkg/backtracking/698.partition_k_equal_sum_subsets.go)| Backtracking |
