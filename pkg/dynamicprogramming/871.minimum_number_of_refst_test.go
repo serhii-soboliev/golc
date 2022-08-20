@@ -1,6 +1,5 @@
 package dynamicprogramming_test
 
-
 import (
 	dp "golc/pkg/dynamicprogramming"
 	"testing"
@@ -8,14 +7,32 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMinRefuelStops1(t *testing.T) {
-	assert.Equal(t, 0, dp.MinRefuelStops(1, 1, [][]int{}))
+func TestMinRefuelStopsDP1(t *testing.T) {
+	assert.Equal(t, 0, dp.MinRefuelStopsDP(1, 1, [][]int{}))
 }
 
-func TestMinRefuelStops2(t *testing.T) {
-	assert.Equal(t, -1, dp.MinRefuelStops(100, 1, [][]int{{10, 100}}))
+func TestMinRefuelStopsDP2(t *testing.T) {
+	assert.Equal(t, -1, dp.MinRefuelStopsDP(100, 1, [][]int{{10, 100}}))
 }
 
-func TestMinRefuelStops3(t *testing.T) {
-	assert.Equal(t, 2, dp.MinRefuelStops(100, 10, [][]int{{10,60},{20,30},{30,30},{60,40}}))
+func TestMinRefuelStopsDP3(t *testing.T) {
+	assert.Equal(t, 2, dp.MinRefuelStopsDP(100, 10, [][]int{{10, 60}, {20, 30}, {30, 30}, {60, 40}}))
 }
+
+func TestMinRefuelStopsPQ1(t *testing.T) {
+	assert.Equal(t, 0, dp.MinRefuelStopsPQ(1, 1, [][]int{}))
+}
+
+func TestMinRefuelStopsPQ2(t *testing.T) {
+	assert.Equal(t, -1, dp.MinRefuelStopsPQ(100, 1, [][]int{{10, 100}}))
+}
+
+func TestMinRefuelStopsPQ3(t *testing.T) {
+	assert.Equal(t, 2, dp.MinRefuelStopsPQ(100, 10, [][]int{{10, 60}, {20, 30}, {30, 30}, {60, 40}}))
+}
+
+func TestMinRefuelStopsPQ4(t *testing.T) {
+	assert.Equal(t, 3, dp.MinRefuelStopsPQ(100, 25, [][]int{{25,25}, {50, 25}, {75, 25}}))
+}
+
+
