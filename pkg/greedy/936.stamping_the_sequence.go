@@ -1,5 +1,6 @@
 package greedy
 
+
 /*
 936. Stamping The Sequence
 https://leetcode.com/problems/stamping-the-sequence/
@@ -7,7 +8,76 @@ https://leetcode.com/problems/stamping-the-sequence/
 
 var QUESTION_MARK byte = '?'
 
+func movesToStampCovers(stamp string, target string) []int {
 
+	sLen, tLen := len(stamp), len(target)
+
+	bTarget := []byte(target)
+	bStamp := []byte(stamp)
+	
+	generateCovers := func() (result [][]byte) {
+
+		for i:=0; i<sLen; i++ {
+			for j:=0; j<sLen-i; j++ {
+				cover := make([]byte, sLen)
+				for k:=0; k<i; k++ {
+					cover[k] = QUESTION_MARK
+				}
+				for k:=i; k<sLen-j; k++ {
+					cover[k] = bStamp[k]
+				}
+				for k:=sLen-j; k<sLen; k++ {
+					cover[k] = QUESTION_MARK
+				}
+				result = append(result, cover)
+			}
+		}
+
+		return
+	}
+
+	replaceWithQuesitonMarks := func(pos int) {
+		for i := 0; i < sLen; i++ {
+			bTarget[i+pos] = QUESTION_MARK
+		}
+	}
+
+	matchCover := func(pos int, cover []byte) bool {
+		for i := 0; i < sLen; i++ {
+			if bTarget[i+pos] != cover[i] { return false}
+		}
+		return true
+	}
+
+	isStamped := func () bool {
+		for _, v := range bTarget {
+			if v != QUESTION_MARK {
+				return false
+			}
+		}
+		return true	
+	}
+
+	covers := generateCovers()
+	answer := []int{}
+
+	p := tLen - sLen
+	for !isStamped() {
+		found := false
+		for i:=p; i>=0; i-- {
+			for _, cover := range covers {
+				if matchCover(i, cover) {
+					found = true
+					answer = append([]int{i}, answer...)
+					replaceWithQuesitonMarks(i)
+				}
+			}
+		}	
+		if !found  { return []int{} }
+	}
+
+	return answer
+}
 
 func movesToStamp(stamp string, target string) []int {
 
@@ -146,4 +216,8 @@ func MovesToStampGreedy(stamp string, target string) []int {
 
 func MovesToStamp(stamp string, target string) []int {
 	return movesToStamp(stamp, target)
+}
+
+func MovesToStampCovers(stamp string, target string) []int {
+	return movesToStampCovers(stamp, target)
 }
