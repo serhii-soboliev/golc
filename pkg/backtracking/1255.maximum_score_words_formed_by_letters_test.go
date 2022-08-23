@@ -42,12 +42,7 @@ func TestMaxScoreWords5(t *testing.T) {
 	assert.Equal(t, 95, bt.MaxScoreWords(words, letters, score))
 }
 
-// func TestMaxScoreWords6(t *testing.T) {
-// 	words := []string{"eb","bbbbd","cad","c","e","baeba","bac"}
-// 	letters := []byte{'a','a','a','a','a','a','a','b','b','b','b','b','b','c','c','c','c','c','c','d','d','d','d','d','d','d','e','e','e','e'}
-// 	score := []int{8,4,6,8,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
-// 	assert.Equal(t, 95, bt.MaxScoreWords(words, letters, score))
-// }
+
 
 
 
