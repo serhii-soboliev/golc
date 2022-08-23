@@ -7,23 +7,44 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestIsPalindrome1(t *testing.T) {
+func TestIsPalindromeReverse1(t *testing.T) {
 	a := ll.SliceToLinkedList([]int{1, 2, 2, 1})
-	assert.True(t, ll.IsPalindrome(a));
+	assert.True(t, ll.IsPalindromeReverse(a))
 }
 
-func TestIsPalindrome2(t *testing.T) {
+func TestIsPalindromeReverse2(t *testing.T) {
 	a := ll.SliceToLinkedList([]int{1, 2})
-	assert.False(t, ll.IsPalindrome(a));
+	assert.False(t, ll.IsPalindromeReverse(a))
 }
 
-func TestIsPalindrome3(t *testing.T) {
+func TestIsPalindromeReverse3(t *testing.T) {
 	a := ll.SliceToLinkedList([]int{1, 2, 3, 4})
-	assert.False(t, ll.IsPalindrome(a));
+	assert.False(t, ll.IsPalindromeReverse(a))
 }
 
-func TestIsPalindrome4(t *testing.T) {
+func TestIsPalindromeReverse4(t *testing.T) {
 	a := ll.SliceToLinkedList([]int{1})
-	assert.True(t, ll.IsPalindrome(a));
+	assert.True(t, ll.IsPalindromeReverse(a))
 }
+
+func TestIsPalindromeFastAndSlow1(t *testing.T) {
+	a := ll.SliceToLinkedList([]int{1, 2, 2, 1})
+	assert.True(t, ll.IsPalindromeFastAndSlow(a))
+}
+
+func TestIsPalindromeFastAndSlow2(t *testing.T) {
+	a := ll.SliceToLinkedList([]int{1, 2})
+	assert.False(t, ll.IsPalindromeFastAndSlow(a))
+}
+
+func TestIsPalindromeFastAndSlow3(t *testing.T) {
+	a := ll.SliceToLinkedList([]int{1, 2, 3, 4})
+	assert.False(t, ll.IsPalindromeFastAndSlow(a))
+}
+
+func TestIsPalindromeFastAndSlow4(t *testing.T) {
+	a := ll.SliceToLinkedList([]int{1})
+	assert.True(t, ll.IsPalindromeFastAndSlow(a))
+}
+
 
