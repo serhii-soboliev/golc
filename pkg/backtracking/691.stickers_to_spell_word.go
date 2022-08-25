@@ -57,52 +57,6 @@ func buildStickersLetterHistogram(stickers []string, target string) [][]rune {
 	return stickersRuneHistogram
 }
 
-func copyHistogram(c []rune) []rune {
-	cpy := make([]rune, len(c))
-	copy(cpy, c)
-	return cpy
-}
-
-func minStickersDP(stickers []string, target string) int {
-
-	stickersLetterHistogram := buildStickersLetterHistogram(stickers, target)
-
-	var dfs func(string, []rune) int
-
-	dp := make(map[string]int)
-
-	dfs = func(t string, sticker []rune) int {
-		if v, ok := dp[t]; ok {
-			return v
-		}
-		res := 1
-		if len(sticker) == 0 { res = 0}
-		remainingWord := ""
-		for _, r := range target {
-			if sticker[r-START_LETTER] == 0 { 
-				remainingWord += string(r) 
-				sticker[r-START_LETTER] -= 1
-			}
-		}
-		if len(remainingWord) > 0 {
-			used := math.MaxInt
-			for _, h := range stickersLetterHistogram {
-				if h[remainingWord[0] - byte(START_LETTER)] == 0 { continue }
-				tempRes := dfs(remainingWord, copyHistogram(h))
-				if tempRes < used { used = tempRes}
-			}
-			dp[remainingWord] = used
-			res += used
-		}
-
-		return res
-	}
-
-	result := dfs(target, make([]rune, LETTERS_COUNT))
-	if result == math.MaxInt { return -1 }
-	return result
-}
-
 func minStickersBacktrack(stickers []string, target string) int {
 	minUsedStickersNumber := math.MaxInt32
 	stickersLetterHistogram := buildStickersLetterHistogram(stickers, target)

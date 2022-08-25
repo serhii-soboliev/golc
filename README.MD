@@ -52,6 +52,7 @@ Leetcode practice using GoLang
 |980| Unique Paths III| [link](pkg/backtracking/980.unique_paths_III.go)| Backtracking|
 |996| Number of Squareful Arrays| [link](pkg/backtracking/996.number_of_squareful_arrays.go)| Backtracking|
 |1096| Brace Expansion II| [link](pkg/bfs/1096.brace_expansion_II.go)| BFS |
+|1307| Verbal Arithmetic Puzzle| [link](pkg/backtracking/1307.verbal_arithmetic_puzzle.go)| Backtracking |
 |1338| Reduce Array Size to The Half| [link](pkg/hashmap/1338.reduce_array_size_to_the_half.go)| HashMap |
 |1220| Count Vowels Permutation| [link](pkg/dynamicprogramming/1220.count_vowels_permutation.go)| DP|
 |1255| Maximum Score Words Formed by Letters| [link](pkg/backtracking/1255.maximum_score_words_formed_by_letters.go)| Backtracking|
