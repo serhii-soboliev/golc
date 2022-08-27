@@ -23,10 +23,13 @@ func distributeCookies(cookies []int, k int) int {
 			return
 		}
 		currentCookies := cookies[pos]
-		for i:=0; i<k; i++ {
-			receivedCookies[i] += currentCookies
-			backtrack(pos+1, receivedCookies, max(receivedCookies[i], currentUnfairness))
-			receivedCookies[i] -= currentCookies	
+		for i:=0; i<k; i++ {	
+			newUnfairness := max(receivedCookies[i] + currentCookies, currentUnfairness)
+			if newUnfairness < unfairness {
+				receivedCookies[i] += currentCookies
+				backtrack(pos+1, receivedCookies, newUnfairness)
+				receivedCookies[i] -= currentCookies
+			}			
 		}
 	}
 
