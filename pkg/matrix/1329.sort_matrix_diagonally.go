@@ -1,7 +1,5 @@
 package matrix
 
-import "sort"
-
 /*
 1329. Sort the Matrix Diagonally
 https://leetcode.com/problems/sort-the-matrix-diagonally/
@@ -14,6 +12,21 @@ func diagonalSort(mat [][]int) [][]int {
 		return i >= 0 && i < m && j >= 0 && j < n
 	}
 
+	bucketSort := func(a []int) {
+		s := [101]int{}
+		for _, v := range a {
+			s[v] += 1
+		}
+		k := 0
+		for i, v := range s {
+			for j:=0; j<v; j++ {
+				a[k] = i
+				k += 1
+			}
+		}
+
+	}
+
 	sortDiagonal := func (i int, j int) {
 		new_i, new_j := i, j
 		diagonal := []int{}
@@ -22,7 +35,7 @@ func diagonalSort(mat [][]int) [][]int {
 			new_i += 1
 			new_j += 1
 		}
-		sort.Ints(diagonal)
+		bucketSort(diagonal)
 		new_i, new_j = i, j
 		for _, v := range diagonal {
 			mat[new_i][new_j] = v
