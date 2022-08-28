@@ -57,6 +57,7 @@ Leetcode practice using GoLang
 |1338| Reduce Array Size to The Half| [link](pkg/hashmap/1338.reduce_array_size_to_the_half.go)| HashMap |
 |1220| Count Vowels Permutation| [link](pkg/dynamicprogramming/1220.count_vowels_permutation.go)| DP|
 |1255| Maximum Score Words Formed by Letters| [link](pkg/backtracking/1255.maximum_score_words_formed_by_letters.go)| Backtracking|
+|1329| Sort the Matrix Diagonally| [link](pkg/matrix/1329.sort_matrix_diagonally.go)| Matrix|
 |1588|  Sum of All Odd Length Subarrays| [link](pkg/array/1588.sum_all_odd_length_subarrays.go)| Prefix Sum|
 |1732| Find the Highest Altitude| [link](pkg/array/1732.highest_altitude.go)| Array|
 |2014| Longest Subsequence Repeated k Times| [link](pkg/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
