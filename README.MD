@@ -62,6 +62,7 @@ Leetcode practice using GoLang
 |1329| Sort the Matrix Diagonally| [link](pkg/matrix/1329.sort_matrix_diagonally.go)| Matrix|
 |1588|  Sum of All Odd Length Subarrays| [link](pkg/array/1588.sum_all_odd_length_subarrays.go)| Prefix Sum|
 |1732| Find the Highest Altitude| [link](pkg/array/1732.highest_altitude.go)| Array|
+|1799| Maximize Score After N Operations| [link](pkg/backtracking/1799.maximize_score_after_n_operations.go)| DFS+Memo|
 |2014| Longest Subsequence Repeated k Times| [link](pkg/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
 |2056| Number of Valid Move Combinations On Chessboard| [link](pkg/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
 |2305| Fair Distribution of Cookies| [link](pkg/backtracking/2305.fair_distribution_cookies.go)| Backtracking|
