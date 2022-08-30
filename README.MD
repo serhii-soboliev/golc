@@ -16,6 +16,7 @@ Leetcode practice using GoLang
 |5| Longest Palindromic Substring | [link](pkg/string/5.longest_palindromic_substring.go)| String|
 |30| Substring with Concatenation of All Words | [link](pkg/string/30.substring_with_concatenation_of_all_words.go)| String|
 |33| Sudoku Solver | [link](pkg/backtracking/33.sudoku_solver.go)| Backtracking|
+|48| Rotate Image | [link](pkg/matrix/48.rotate_image.go)| Matrix|
 |66| Plus One | [link](pkg/math/66.plus_one.go)| Math |
 |86| Partition list | [link](pkg/linkedlist/86.partition_list.go)| Linked List|
 |122| Word Ladder II | [link](pkg/backtracking/126.word_ladder_2.go)| Backtracking|
