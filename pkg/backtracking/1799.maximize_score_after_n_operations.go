@@ -32,7 +32,7 @@ func gcds(nums []int) [][]int {
 
 func maxScore(nums []int) int {
 	n := len(nums)
-	memo := make(map[int]map[int]int)
+	memo := make(map[int]int)
 	b := gcds(nums)
 
 	var dfs func(pos int, mask int) int
@@ -41,10 +41,8 @@ func maxScore(nums []int) int {
 		if pos > n / 2 {
 			return 0
 		}
-		if v1, ok1 := memo[mask];ok1 {
-			if v2,ok2 := v1[pos];ok2 {
-				return v2
-			}	
+		if v, ok := memo[mask];ok {
+			return v
 		}
 		res := 0
 		for i:=0; i<n; i++ {
@@ -58,7 +56,7 @@ func maxScore(nums []int) int {
 				}
 			}	
 		}
-		memo[mask] = map[int]int{pos:res}
+		memo[mask] = res
 		return res
 	}
 	
