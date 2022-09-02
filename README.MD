@@ -66,5 +66,6 @@ Leetcode practice using GoLang
 |1799| Maximize Score After N Operations| [link](pkg/backtracking/1799.maximize_score_after_n_operations.go)| DFS+Memo|
 |2014| Longest Subsequence Repeated k Times| [link](pkg/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
 |2056| Number of Valid Move Combinations On Chessboard| [link](pkg/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
+|2065| Maximum Path Quality of a Graph| [link](pkg/backtracking/2065.max_path_quality_graph.go)| Backtracking|
 |2305| Fair Distribution of Cookies| [link](pkg/backtracking/2305.fair_distribution_cookies.go)| Backtracking|
 |2364| Count Number of Bad Pairs| [link](pkg/hashmap/2364.count_number_of_bad_pairs.go)| HashMap|
