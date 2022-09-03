@@ -69,3 +69,6 @@ Leetcode practice using GoLang
 |2065| Maximum Path Quality of a Graph| [link](pkg/backtracking/2065.max_path_quality_graph.go)| Backtracking|
 |2305| Fair Distribution of Cookies| [link](pkg/backtracking/2305.fair_distribution_cookies.go)| Backtracking|
 |2364| Count Number of Bad Pairs| [link](pkg/hashmap/2364.count_number_of_bad_pairs.go)| HashMap|
+|2395| Find Subarrays With Equal Sum| [link](pkg/contest/biweekly86.go)| Set |
+|2396| Strictly Palindromic Number| [link](pkg/contest/biweekly86.go)| Math |
+|2397| Maximum Rows Covered by Columns| [link](pkg/contest/biweekly86.go)| Backtracking |
