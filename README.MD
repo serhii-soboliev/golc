@@ -31,6 +31,7 @@ Leetcode practice using GoLang
 |301| Remove Invalid Parentheses| [link](pkg/backtracking/301.remove_invalid_parentheses.go)| Backtracking |
 |363| Max Sum of Rectangle No Larger Than K| [link](pkg/matrix/363.max_sum_rectangle_no_larger_k.go)| Prefix Sum |
 |377| Combination Sum IV | [link](pkg/dynamicprogramming/377.combination_sum_4.go)| DP |
+|429| N-ary Tree Level Order Traversal| [link](pkg/tree/429.nary_tree_level_order_traversal.go)| Tree |
 |458| Poor Pigs | [link](pkg/math/458.poor_pigs.go)| Math |
 |491| Increasing Subsequences| [link](pkg/backtracking/491.increasing_subsequences.go)| String|
 |494| Target Sum | [link](pkg/backtracking/494.target_sum.go)| Backtracking|
