@@ -64,6 +64,7 @@ Leetcode practice using GoLang
 |1588| Sum of All Odd Length Subarrays| [link](pkg/array/1588.sum_all_odd_length_subarrays.go)| Prefix Sum|
 |1593| Split a String Into the Max Number of Unique Substrings| [link](pkg/backtracking/1593.split_string_into_max_number_of_unique_substrings.go)| Backtracking |
 |1601| Maximum Number of Achievable Transfer Requests| [link](pkg/backtracking/1601.max_num_achievable_transf_req.go)| Backtracking |
+|1723| Find Minimum Time to Finish All Jobs| [link](pkg/backtracking/1723.find_min_time_to_finish_all_jobs.go)| Backtracking|
 |1732| Find the Highest Altitude| [link](pkg/array/1732.highest_altitude.go)| Array|
 |1799| Maximize Score After N Operations| [link](pkg/backtracking/1799.maximize_score_after_n_operations.go)| DFS+Memo|
 |2014| Longest Subsequence Repeated k Times| [link](pkg/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
