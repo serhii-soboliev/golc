@@ -12,9 +12,9 @@ Leetcode practice using GoLang
 
 |#  | Problem          | Link To Solution                              | Method               |
 |:-:| :---             | :-                                            | :-                   |
-|1| Two Sum | [link](pkg/hashmap/1.two_sum.go)| HashMap |
-|2| Add Two Numbers | [link](pkg/linkedlist/2.add_two_numbers.go)| Linked List|
-|3| Longest Substring Without Repeating Characters| [link](pkg/slidingwindow/3.longest_substring_wo_rep_char.go)| Sliding Window|
+|[1](https://leetcode.com/problems/two-sum/)| Two Sum | [link](pkg/hashmap/1.two_sum.go)| HashMap |
+|[2](https://leetcode.com/problems/add-two-numbers/)| Add Two Numbers | [link](pkg/linkedlist/2.add_two_numbers.go)| Linked List|
+|[3](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Longest Substring Without Repeating Characters| [link](pkg/slidingwindow/3.longest_substring_wo_rep_char.go)| Sliding Window|
 |5| Longest Palindromic Substring | [link](pkg/string/5.longest_palindromic_substring.go)| String|
 |30| Substring with Concatenation of All Words | [link](pkg/string/30.substring_with_concatenation_of_all_words.go)| String|
 |33| Sudoku Solver | [link](pkg/backtracking/33.sudoku_solver.go)| Backtracking|
