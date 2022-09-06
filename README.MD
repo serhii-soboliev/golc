@@ -46,6 +46,7 @@ Leetcode practice using GoLang
 |784| Letter Case Permutation  | [link](pkg/backtracking/784.letter_case_permutation.go)| Backtracking |
 |792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| String|
 |804| Unique Morse Code Words | [link](pkg/string/804.unique_morse_code_words.go)| HashTable|
+|[814](https://leetcode.com/problems/binary-tree-pruning/)| Binary Tree Pruning | [link](pkg/tree/814.binary_tree_pruning.go)| Tree|
 |816| Ambiguous Coordinates | [link](pkg/backtracking/816.ambiguous_coordinates.go)| Backtracking|
 |823| Binary Trees With Factors | [link](pkg/dynamicprogramming/823.binary_trees_with_factors.go)| DP|
 |842| Split Array into Fibonacci Sequence | [link](pkg/backtracking/842.split_array_into_fibonacci_sequence.go)| Backtracking|
