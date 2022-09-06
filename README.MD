@@ -12,70 +12,70 @@ Leetcode practice using GoLang
 
 |#  | Problem          | Link To Solution                              | Method               |
 |:-:| :---             | :-                                            | :-                   |
-|[1](https://leetcode.com/problems/two-sum/)| Two Sum | [link](pkg/hashmap/1.two_sum.go)| HashMap |
-|[2](https://leetcode.com/problems/add-two-numbers/)| Add Two Numbers | [link](pkg/linkedlist/2.add_two_numbers.go)| Linked List|
-|[3](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Longest Substring Without Repeating Characters| [link](pkg/slidingwindow/3.longest_substring_wo_rep_char.go)| Sliding Window|
-|5| Longest Palindromic Substring | [link](pkg/string/5.longest_palindromic_substring.go)| String|
-|30| Substring with Concatenation of All Words | [link](pkg/string/30.substring_with_concatenation_of_all_words.go)| String|
-|33| Sudoku Solver | [link](pkg/backtracking/33.sudoku_solver.go)| Backtracking|
-|48| Rotate Image | [link](pkg/matrix/48.rotate_image.go)| Matrix|
-|66| Plus One | [link](pkg/math/66.plus_one.go)| Math |
-|86| Partition list | [link](pkg/linkedlist/86.partition_list.go)| Linked List|
-|122| Word Ladder II | [link](pkg/backtracking/126.word_ladder_2.go)| Backtracking|
-|140| Word Break II | [link](pkg/backtracking/140.word_break_2.go)| Backtracking|
-|199| Binary Tree Right Side View | [link](pkg/tree/199.binary_tree_right_side_view.go)| Binary Tree|
-|208| Trie(Prefix tree) | [link](pkg/datastructures/trie/208.trie.go)| Trie|
-|212| Word Search 2 | [link](pkg/backtracking/212.word_search_2.go)| Backtracking |
-|234| Palindrome Linked List | [link](pkg/linkedlist/234.palindrome_linked_list.go)| Linked List |
-|240| Search 2D Matrix 2 | [link](pkg/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |
-|242| Valid Anagram | [link](pkg/string/242.valid_anagram.go)| Binary Search |
-|282| Expression And Operators| [link](pkg/backtracking/282.expression_add_operators.go)| Backtracking |
-|301| Remove Invalid Parentheses| [link](pkg/backtracking/301.remove_invalid_parentheses.go)| Backtracking |
-|363| Max Sum of Rectangle No Larger Than K| [link](pkg/matrix/363.max_sum_rectangle_no_larger_k.go)| Prefix Sum |
-|377| Combination Sum IV | [link](pkg/dynamicprogramming/377.combination_sum_4.go)| DP |
-|429| N-ary Tree Level Order Traversal| [link](pkg/tree/429.nary_tree_level_order_traversal.go)| Tree |
-|458| Poor Pigs | [link](pkg/math/458.poor_pigs.go)| Math |
-|491| Increasing Subsequences| [link](pkg/backtracking/491.increasing_subsequences.go)| String|
-|494| Target Sum | [link](pkg/backtracking/494.target_sum.go)| Backtracking|
-|526| Beautiful Arrangement | [link](pkg/backtracking/526.beautiful_arrangement.go)| Backtracking|
-|638| Shopping Offers  | [link](pkg/backtracking/638.shopping_offers.go)| Backtracking|
-|659| Split Array into Consecutive Subsequences  | [link](pkg/greedy/659.split_array_into_consecutive_subsequences.go)| Greedy|
-|679| 24 Game  | [link](pkg/backtracking/679.24_game.go)| Backtracking|
-|691| Stickers to Spell Word | [link](pkg/backtracking/691.stickers_to_spell_word.go)| Backtracking|
-|698| Partition to K Equal Sum Subsets  | [link](pkg/backtracking/698.partition_k_equal_sum_subsets.go)| Backtracking |
-|784| Letter Case Permutation  | [link](pkg/backtracking/784.letter_case_permutation.go)| Backtracking |
-|792| Number of Matching Subsequences  | [link](pkg/string/792.number_of_matching_subsequences.go)| String|
-|804| Unique Morse Code Words | [link](pkg/string/804.unique_morse_code_words.go)| HashTable|
-|[814](https://leetcode.com/problems/binary-tree-pruning/)| Binary Tree Pruning | [link](pkg/tree/814.binary_tree_pruning.go)| Tree|
-|816| Ambiguous Coordinates | [link](pkg/backtracking/816.ambiguous_coordinates.go)| Backtracking|
-|823| Binary Trees With Factors | [link](pkg/dynamicprogramming/823.binary_trees_with_factors.go)| DP|
-|842| Split Array into Fibonacci Sequence | [link](pkg/backtracking/842.split_array_into_fibonacci_sequence.go)| Backtracking|
-|858| Mirror Reflection| [link](pkg/math/858.mirror_reflection.go)| Math|
-|871| Minimum Number of Refueling Stops| [link](pkg/dynamicprogramming/871.minimum_number_of_refst.go)| DP, Priority Queue|
-|890| Find and Replace Pattern| [link](pkg/string/890.find_and_replace_pattern.go)| String|
-|936| Stamping The Sequence| [link](pkg/greedy/936.stamping_the_sequence.go.go)| Greedy|
-|967| Numbers With Same Consecutive Differences| [link](pkg/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
-|980| Unique Paths III| [link](pkg/backtracking/980.unique_paths_III.go)| Backtracking|
-|996| Number of Squareful Arrays| [link](pkg/backtracking/996.number_of_squareful_arrays.go)| Backtracking|
-|1079| Letter Tile Possibilities| [link](pkg/backtracking/1079.letter_tile_possibilities.go)| Backtracking |
-|1096| Brace Expansion II| [link](pkg/bfs/1096.brace_expansion_II.go)| BFS |
-|1307| Verbal Arithmetic Puzzle| [link](pkg/backtracking/1307.verbal_arithmetic_puzzle.go)| Backtracking |
-|1338| Reduce Array Size to The Half| [link](pkg/hashmap/1338.reduce_array_size_to_the_half.go)| HashMap |
-|1220| Count Vowels Permutation| [link](pkg/dynamicprogramming/1220.count_vowels_permutation.go)| DP|
-|1255| Maximum Score Words Formed by Letters| [link](pkg/backtracking/1255.maximum_score_words_formed_by_letters.go)| Backtracking|
-|1329| Sort the Matrix Diagonally| [link](pkg/matrix/1329.sort_matrix_diagonally.go)| Matrix|
-|1588| Sum of All Odd Length Subarrays| [link](pkg/array/1588.sum_all_odd_length_subarrays.go)| Prefix Sum|
-|1593| Split a String Into the Max Number of Unique Substrings| [link](pkg/backtracking/1593.split_string_into_max_number_of_unique_substrings.go)| Backtracking |
-|1601| Maximum Number of Achievable Transfer Requests| [link](pkg/backtracking/1601.max_num_achievable_transf_req.go)| Backtracking |
-|1647| Minimum Deletions to Make Character Frequencies Unique| [link](pkg/greedy/1647.min_del_make_char_freq_unique.go)| Greedy |
-|1723| Find Minimum Time to Finish All Jobs| [link](pkg/backtracking/1723.find_min_time_to_finish_all_jobs.go)| Backtracking|
-|1732| Find the Highest Altitude| [link](pkg/array/1732.highest_altitude.go)| Array|
-|1799| Maximize Score After N Operations| [link](pkg/backtracking/1799.maximize_score_after_n_operations.go)| DFS+Memo|
-|2014| Longest Subsequence Repeated k Times| [link](pkg/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
-|2056| Number of Valid Move Combinations On Chessboard| [link](pkg/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
-|2065| Maximum Path Quality of a Graph| [link](pkg/backtracking/2065.max_path_quality_graph.go)| Backtracking|
-|2305| Fair Distribution of Cookies| [link](pkg/backtracking/2305.fair_distribution_cookies.go)| Backtracking|
-|2364| Count Number of Bad Pairs| [link](pkg/hashmap/2364.count_number_of_bad_pairs.go)| HashMap|
-|2395| Find Subarrays With Equal Sum| [link](pkg/contest/biweekly86.go)| Set |
-|2396| Strictly Palindromic Number| [link](pkg/contest/biweekly86.go)| Math |
-|2397| Maximum Rows Covered by Columns| [link](pkg/contest/biweekly86.go)| Backtracking |
+|[1](https://leetcode.com/problems/two-sum/)| Two Sum | [link](pkg/leetcode/hashmap/1.two_sum.go)| HashMap |
+|[2](https://leetcode.com/problems/add-two-numbers/)| Add Two Numbers | [link](pkg/leetcode/linkedlist/2.add_two_numbers.go)| Linked List|
+|[3](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Longest Substring Without Repeating Characters| [link](pkg/leetcode/slidingwindow/3.longest_substring_wo_rep_char.go)| Sliding Window|
+|5| Longest Palindromic Substring | [link](pkg/leetcode/string/5.longest_palindromic_substring.go)| String|
+|30| Substring with Concatenation of All Words | [link](pkg/leetcode/string/30.substring_with_concatenation_of_all_words.go)| String|
+|33| Sudoku Solver | [link](pkg/leetcode/backtracking/33.sudoku_solver.go)| Backtracking|
+|48| Rotate Image | [link](pkg/leetcode/matrix/48.rotate_image.go)| Matrix|
+|66| Plus One | [link](pkg/leetcode/math/66.plus_one.go)| Math |
+|86| Partition list | [link](pkg/leetcode/linkedlist/86.partition_list.go)| Linked List|
+|122| Word Ladder II | [link](pkg/leetcode/backtracking/126.word_ladder_2.go)| Backtracking|
+|140| Word Break II | [link](pkg/leetcode/backtracking/140.word_break_2.go)| Backtracking|
+|199| Binary Tree Right Side View | [link](pkg/leetcode/tree/199.binary_tree_right_side_view.go)| Binary Tree|
+|208| Trie(Prefix tree) | [link](pkg/leetcode/datastructures/trie/208.trie.go)| Trie|
+|212| Word Search 2 | [link](pkg/leetcode/backtracking/212.word_search_2.go)| Backtracking |
+|234| Palindrome Linked List | [link](pkg/leetcode/linkedlist/234.palindrome_linked_list.go)| Linked List |
+|240| Search 2D Matrix 2 | [link](pkg/leetcode/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |
+|242| Valid Anagram | [link](pkg/leetcode/string/242.valid_anagram.go)| Binary Search |
+|282| Expression And Operators| [link](pkg/leetcode/backtracking/282.expression_add_operators.go)| Backtracking |
+|301| Remove Invalid Parentheses| [link](pkg/leetcode/backtracking/301.remove_invalid_parentheses.go)| Backtracking |
+|363| Max Sum of Rectangle No Larger Than K| [link](pkg/leetcode/matrix/363.max_sum_rectangle_no_larger_k.go)| Prefix Sum |
+|377| Combination Sum IV | [link](pkg/leetcode/dynamicprogramming/377.combination_sum_4.go)| DP |
+|429| N-ary Tree Level Order Traversal| [link](pkg/leetcode/tree/429.nary_tree_level_order_traversal.go)| Tree |
+|458| Poor Pigs | [link](pkg/leetcode/math/458.poor_pigs.go)| Math |
+|491| Increasing Subsequences| [link](pkg/leetcode/backtracking/491.increasing_subsequences.go)| String|
+|494| Target Sum | [link](pkg/leetcode/backtracking/494.target_sum.go)| Backtracking|
+|526| Beautiful Arrangement | [link](pkg/leetcode/backtracking/526.beautiful_arrangement.go)| Backtracking|
+|638| Shopping Offers  | [link](pkg/leetcode/backtracking/638.shopping_offers.go)| Backtracking|
+|659| Split Array into Consecutive Subsequences  | [link](pkg/leetcode/greedy/659.split_array_into_consecutive_subsequences.go)| Greedy|
+|679| 24 Game  | [link](pkg/leetcode/backtracking/679.24_game.go)| Backtracking|
+|691| Stickers to Spell Word | [link](pkg/leetcode/backtracking/691.stickers_to_spell_word.go)| Backtracking|
+|698| Partition to K Equal Sum Subsets  | [link](pkg/leetcode/backtracking/698.partition_k_equal_sum_subsets.go)| Backtracking |
+|784| Letter Case Permutation  | [link](pkg/leetcode/backtracking/784.letter_case_permutation.go)| Backtracking |
+|792| Number of Matching Subsequences  | [link](pkg/leetcode/string/792.number_of_matching_subsequences.go)| String|
+|804| Unique Morse Code Words | [link](pkg/leetcode/string/804.unique_morse_code_words.go)| HashTable|
+|[814](https://leetcode.com/problems/binary-tree-pruning/)| Binary Tree Pruning | [link](pkg/leetcode/tree/814.binary_tree_pruning.go)| Tree|
+|816| Ambiguous Coordinates | [link](pkg/leetcode/backtracking/816.ambiguous_coordinates.go)| Backtracking|
+|823| Binary Trees With Factors | [link](pkg/leetcode/dynamicprogramming/823.binary_trees_with_factors.go)| DP|
+|842| Split Array into Fibonacci Sequence | [link](pkg/leetcode/backtracking/842.split_array_into_fibonacci_sequence.go)| Backtracking|
+|858| Mirror Reflection| [link](pkg/leetcode/math/858.mirror_reflection.go)| Math|
+|871| Minimum Number of Refueling Stops| [link](pkg/leetcode/dynamicprogramming/871.minimum_number_of_refst.go)| DP, Priority Queue|
+|890| Find and Replace Pattern| [link](pkg/leetcode/string/890.find_and_replace_pattern.go)| String|
+|936| Stamping The Sequence| [link](pkg/leetcode/greedy/936.stamping_the_sequence.go.go)| Greedy|
+|967| Numbers With Same Consecutive Differences| [link](pkg/leetcode/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
+|980| Unique Paths III| [link](pkg/leetcode/backtracking/980.unique_paths_III.go)| Backtracking|
+|996| Number of Squareful Arrays| [link](pkg/leetcode/backtracking/996.number_of_squareful_arrays.go)| Backtracking|
+|1079| Letter Tile Possibilities| [link](pkg/leetcode/backtracking/1079.letter_tile_possibilities.go)| Backtracking |
+|1096| Brace Expansion II| [link](pkg/leetcode/bfs/1096.brace_expansion_II.go)| BFS |
+|1307| Verbal Arithmetic Puzzle| [link](pkg/leetcode/backtracking/1307.verbal_arithmetic_puzzle.go)| Backtracking |
+|1338| Reduce Array Size to The Half| [link](pkg/leetcode/hashmap/1338.reduce_array_size_to_the_half.go)| HashMap |
+|1220| Count Vowels Permutation| [link](pkg/leetcode/dynamicprogramming/1220.count_vowels_permutation.go)| DP|
+|1255| Maximum Score Words Formed by Letters| [link](pkg/leetcode/backtracking/1255.maximum_score_words_formed_by_letters.go)| Backtracking|
+|1329| Sort the Matrix Diagonally| [link](pkg/leetcode/matrix/1329.sort_matrix_diagonally.go)| Matrix|
+|1588| Sum of All Odd Length Subarrays| [link](pkg/leetcode/array/1588.sum_all_odd_length_subarrays.go)| Prefix Sum|
+|1593| Split a String Into the Max Number of Unique Substrings| [link](pkg/leetcode/backtracking/1593.split_string_into_max_number_of_unique_substrings.go)| Backtracking |
+|1601| Maximum Number of Achievable Transfer Requests| [link](pkg/leetcode/backtracking/1601.max_num_achievable_transf_req.go)| Backtracking |
+|1647| Minimum Deletions to Make Character Frequencies Unique| [link](pkg/leetcode/greedy/1647.min_del_make_char_freq_unique.go)| Greedy |
+|1723| Find Minimum Time to Finish All Jobs| [link](pkg/leetcode/backtracking/1723.find_min_time_to_finish_all_jobs.go)| Backtracking|
+|1732| Find the Highest Altitude| [link](pkg/leetcode/array/1732.highest_altitude.go)| Array|
+|1799| Maximize Score After N Operations| [link](pkg/leetcode/backtracking/1799.maximize_score_after_n_operations.go)| DFS+Memo|
+|2014| Longest Subsequence Repeated k Times| [link](pkg/leetcode/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
+|2056| Number of Valid Move Combinations On Chessboard| [link](pkg/leetcode/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
+|2065| Maximum Path Quality of a Graph| [link](pkg/leetcode/backtracking/2065.max_path_quality_graph.go)| Backtracking|
+|2305| Fair Distribution of Cookies| [link](pkg/leetcode/backtracking/2305.fair_distribution_cookies.go)| Backtracking|
+|2364| Count Number of Bad Pairs| [link](pkg/leetcode/hashmap/2364.count_number_of_bad_pairs.go)| HashMap|
+|2395| Find Subarrays With Equal Sum| [link](pkg/leetcode/contest/biweekly86.go)| Set |
+|2396| Strictly Palindromic Number| [link](pkg/leetcode/contest/biweekly86.go)| Math |
+|2397| Maximum Rows Covered by Columns| [link](pkg/leetcode/contest/biweekly86.go)| Backtracking |
