@@ -10,6 +10,10 @@ Leetcode practice using GoLang
 
 # Daily Coding Problem
 
+## Google problems
+
+### [1](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
+
 
 # Leetcode Problems
 
