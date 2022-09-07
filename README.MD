@@ -8,7 +8,11 @@ Leetcode & DailyCodingProblem practice using GoLang
 ![Code Quality Score](https://api.codiga.io/project/34041/score/svg)
 ![Code Grade](https://api.codiga.io/project/34041/status/svg)
 
-# Leetcode Problems
+### Table of Contents
+**[Leetcode](#leetcode-problems)**<br>
+**[Daily Coding Problem](#daily-coding-problem)**<br>
+
+## Leetcode Problems
 
 |#  | Problem          | Link To Solution                              | Method               |
 |:-:| :---             | :-                                            | :-                   |
@@ -81,8 +85,8 @@ Leetcode & DailyCodingProblem practice using GoLang
 |2396| Strictly Palindromic Number| [link](pkg/leetcode/contest/biweekly86.go)| Math |
 |2397| Maximum Rows Covered by Columns| [link](pkg/leetcode/contest/biweekly86.go)| Backtracking |
 
-# Daily Coding Problem
+## Daily Coding Problem
 
-## Google problems
+### Google problems
 
-### [1](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
+#### [1](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
