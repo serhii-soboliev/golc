@@ -2,18 +2,11 @@
 
 # About the project
 
-Leetcode practice using GoLang
+Leetcode & DailyCodingProblem practice using GoLang
 
 ![Build Status](https://github.com/serhii-soboliev/golc/actions/workflows/go.yml/badge.svg)
 ![Code Quality Score](https://api.codiga.io/project/34041/score/svg)
 ![Code Grade](https://api.codiga.io/project/34041/status/svg)
-
-# Daily Coding Problem
-
-## Google problems
-
-### [1](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
-
 
 # Leetcode Problems
 
@@ -87,3 +80,9 @@ Leetcode practice using GoLang
 |2395| Find Subarrays With Equal Sum| [link](pkg/leetcode/contest/biweekly86.go)| Set |
 |2396| Strictly Palindromic Number| [link](pkg/leetcode/contest/biweekly86.go)| Math |
 |2397| Maximum Rows Covered by Columns| [link](pkg/leetcode/contest/biweekly86.go)| Backtracking |
+
+# Daily Coding Problem
+
+## Google problems
+
+### [1](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
