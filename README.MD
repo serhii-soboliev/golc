@@ -9,7 +9,8 @@ Leetcode & DailyCodingProblem practice using GoLang
 ![Code Grade](https://api.codiga.io/project/34041/status/svg)
 
 ### Table of Contents
-**[Leetcode](#leetcode-problems)**<br>
+
+**[Leetcode](#leetcode-problems)**<br/>
 **[Daily Coding Problem](#daily-coding-problem)**<br>
 
 ## Leetcode Problems
@@ -19,7 +20,8 @@ Leetcode & DailyCodingProblem practice using GoLang
 |[1](https://leetcode.com/problems/two-sum/)| Two Sum | [link](pkg/leetcode/hashmap/1.two_sum.go)| HashMap |
 |[2](https://leetcode.com/problems/add-two-numbers/)| Add Two Numbers | [link](pkg/leetcode/linkedlist/2.add_two_numbers.go)| Linked List|
 |[3](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Longest Substring Without Repeating Characters| [link](pkg/leetcode/slidingwindow/3.longest_substring_wo_rep_char.go)| Sliding Window|
-|5| Longest Palindromic Substring | [link](pkg/leetcode/string/5.longest_palindromic_substring.go)| String|
+|[4](https://leetcode.com/problems/median-of-two-sorted-arrays/)| 4. Median of Two Sorted Arrays| [link](pkg/leetcode/binarysearch/4.median_of_two_sorted_arrays.go)| Binary Search |
+|[5](https://leetcode.com/problems/longest-palindromic-substring/)| Longest Palindromic Substring | [link](pkg/leetcode/string/5.longest_palindromic_substring.go)| String|
 |30| Substring with Concatenation of All Words | [link](pkg/leetcode/string/30.substring_with_concatenation_of_all_words.go)| String|
 |33| Sudoku Solver | [link](pkg/leetcode/backtracking/33.sudoku_solver.go)| Backtracking|
 |48| Rotate Image | [link](pkg/leetcode/matrix/48.rotate_image.go)| Matrix|
@@ -89,4 +91,4 @@ Leetcode & DailyCodingProblem practice using GoLang
 
 ### Google problems
 
-#### [1](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
+#### [Sum of two](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
