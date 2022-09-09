@@ -22,6 +22,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |[3](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Longest Substring Without Repeating Characters| [link](pkg/leetcode/slidingwindow/3.longest_substring_wo_rep_char.go)| Sliding Window|
 |[4](https://leetcode.com/problems/median-of-two-sorted-arrays/)| 4. Median of Two Sorted Arrays| [link](pkg/leetcode/binarysearch/4.median_of_two_sorted_arrays.go)| Binary Search |
 |[5](https://leetcode.com/problems/longest-palindromic-substring/)| Longest Palindromic Substring | [link](pkg/leetcode/string/5.longest_palindromic_substring.go)| String|
+|[6](https://leetcode.com/problems/zigzag-conversion/)| Zigzag Conversion | [link](pkg/leetcode/string/6.zigzag_conversion.go)| String|
 |30| Substring with Concatenation of All Words | [link](pkg/leetcode/string/30.substring_with_concatenation_of_all_words.go)| String|
 |33| Sudoku Solver | [link](pkg/leetcode/backtracking/33.sudoku_solver.go)| Backtracking|
 |48| Rotate Image | [link](pkg/leetcode/matrix/48.rotate_image.go)| Matrix|
