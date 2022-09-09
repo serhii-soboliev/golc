@@ -78,6 +78,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |1723| Find Minimum Time to Finish All Jobs| [link](pkg/leetcode/backtracking/1723.find_min_time_to_finish_all_jobs.go)| Backtracking|
 |1732| Find the Highest Altitude| [link](pkg/leetcode/array/1732.highest_altitude.go)| Array|
 |1799| Maximize Score After N Operations| [link](pkg/leetcode/backtracking/1799.maximize_score_after_n_operations.go)| DFS+Memo|
+|[1996](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)| The Number of Weak Characters in the Game| [link](pkg/leetcode/greedy/1996.num_of_weak_chars.go)| Greedy|
 |2014| Longest Subsequence Repeated k Times| [link](pkg/leetcode/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
 |2056| Number of Valid Move Combinations On Chessboard| [link](pkg/leetcode/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
 |2065| Maximum Path Quality of a Graph| [link](pkg/leetcode/backtracking/2065.max_path_quality_graph.go)| Backtracking|
