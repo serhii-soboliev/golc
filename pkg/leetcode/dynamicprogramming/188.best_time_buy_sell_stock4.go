@@ -5,19 +5,63 @@ package dynamicprogramming
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/
 */
 
-func maxProfit(k int, prices []int) int {
+func maxProfitRecursion(k int, prices []int) int {
+
+	max := func(a, b int) int {
+		if a > b {
+			return a
+		} 
+		return b
+	}
+
+	n := len(prices)
+	memo := make(map[bool][][]int)
+	memo[true] = make([][]int, k+1)
+	memo[false] = make([][]int, k+1)
+	for i:=0;i<k+1;i++ {
+		memo[true][i] = make([]int, n)	
+		memo[false][i] = make([]int, n)	
+		for j:=0; j<n; j++ {
+			memo[false][i][j] = -1		
+			memo[true][i][j] = -1		
+		}
+	}
+
+	var recursion func(pos int, bought bool, transCount int) int
+
+	recursion = func(pos int, bought bool, transCount int) int {
+		if transCount == 0 || pos >= n {
+			return 0
+		}
+		if memo[bought][transCount][pos] != -1 {
+			return memo[bought][transCount][pos]
+		}
+		sum := recursion(pos+1, bought, transCount)
+		if bought {
+			sum = max(sum, recursion(pos+1, false, transCount-1) + prices[pos])	
+		} else {
+			sum = max(sum, recursion(pos+1, true, transCount) - prices[pos])
+		}
+		memo[bought][transCount][pos] = sum
+		return sum
+	}
+
+	return recursion(0, false, k)
+}
+
+func maxProfitBacktracking(k int, prices []int) int {
 	l := len(prices)
 
 	type State struct {
-		idx int
-		isBought bool
-		profit int
+		idx               int
+		isBought          bool
+		profit            int
 		transactionsCount int
 	}
 
 	result := 0
 
-	var search func(state State) 
+	var search func(state State)
 
 	search = func(s State) {
 		if s.idx == l {
@@ -33,9 +77,12 @@ func maxProfit(k int, prices []int) int {
 			if s.transactionsCount < 2*k {
 				s.isBought = false
 				s.profit += price
+				if s.profit < 0 { 
+					return
+				}
 				s.transactionsCount += 1
-				search(s)	
-			}		
+				search(s)
+			}
 		} else {
 			s.idx += 1
 			search(s)
@@ -43,16 +90,20 @@ func maxProfit(k int, prices []int) int {
 				s.isBought = true
 				s.profit -= price
 				s.transactionsCount += 1
-				search(s)	
+				search(s)
 			}
 		}
 	}
 
 	search(State{0, false, 0, 0})
 
-	return result	
+	return result
 }
 
-func MaxProfit4(k int, prices []int) int {
-	return maxProfit(k, prices)
+func MaxProfitRecursion4(k int, prices []int) int {
+	return maxProfitRecursion(k, prices)
+}
+
+func MaxProfit4Backtracking(k int, prices []int) int {
+	return maxProfitBacktracking(k, prices)
 }
