@@ -96,3 +96,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 ### Google problems
 
 #### [Sum of two](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
+
+### Uber problems
+
+#### [Product of Array Except Self](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Uber/problems.md#problem-2)
