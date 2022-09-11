@@ -35,6 +35,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |208| Trie(Prefix tree) | [link](pkg/leetcode/datastructures/trie/208.trie.go)| Trie|
 |212| Word Search 2 | [link](pkg/leetcode/backtracking/212.word_search_2.go)| Backtracking |
 |234| Palindrome Linked List | [link](pkg/leetcode/linkedlist/234.palindrome_linked_list.go)| Linked List |
+|[238](https://leetcode.com/problems/product-of-array-except-self/)| Product of Array Except Self | [link](pkg/dailycodingproblems/uber/problem_2.go)| Array |
 |240| Search 2D Matrix 2 | [link](pkg/leetcode/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |
 |242| Valid Anagram | [link](pkg/leetcode/string/242.valid_anagram.go)| Binary Search |
 |282| Expression And Operators| [link](pkg/leetcode/backtracking/282.expression_add_operators.go)| Backtracking |
