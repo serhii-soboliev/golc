@@ -98,6 +98,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 ### Google problems
 
 #### [Problem 1. Sum of two](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
+####  [Problem 3. Serialize and Deserialize Binary Tree](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-3)
 
 ### Uber problems
 
