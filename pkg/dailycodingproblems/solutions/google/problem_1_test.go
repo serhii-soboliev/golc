@@ -1,7 +1,7 @@
 package google_test
 
 import (
-	g "golc/pkg/dailycodingproblems/google"
+	g "golc/pkg/dailycodingproblems/solutions/google"
 	"testing"
 	"github.com/stretchr/testify/assert"
 )

@@ -11,4 +11,4 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
 Bonus: Can you do this in one pass?
 
-[Solution](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/google/problem_1.go)
+[Solution](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/solutions/google/problem_1.go)

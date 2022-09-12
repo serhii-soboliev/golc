@@ -63,7 +63,8 @@ Leetcode & DailyCodingProblem practice using GoLang
 |858| Mirror Reflection| [link](pkg/leetcode/math/858.mirror_reflection.go)| Math|
 |871| Minimum Number of Refueling Stops| [link](pkg/leetcode/dynamicprogramming/871.minimum_number_of_refst.go)| DP, Priority Queue|
 |890| Find and Replace Pattern| [link](pkg/leetcode/string/890.find_and_replace_pattern.go)| String|
-|936| Stamping The Sequence| [link](pkg/leetcode/greedy/936.stamping_the_sequence.go.go)| Greedy|
+|936| Stamping The Sequence| [link](pkg/leetcode/greedy/936.stamping_the_sequence.go)| Greedy|
+|[948](https://leetcode.com/problems/bag-of-tokens/)| Bag of Tokens| [link](pkg/leetcode/greedy/936.stamping_the_sequence.go)| Greedy|
 |967| Numbers With Same Consecutive Differences| [link](pkg/leetcode/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
 |980| Unique Paths III| [link](pkg/leetcode/backtracking/980.unique_paths_III.go)| Backtracking|
 |996| Number of Squareful Arrays| [link](pkg/leetcode/backtracking/996.number_of_squareful_arrays.go)| Backtracking|

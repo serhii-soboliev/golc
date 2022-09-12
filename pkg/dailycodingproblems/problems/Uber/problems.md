@@ -10,4 +10,4 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 
 Follow-up: what if you can't use division?
 
-[Solution](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/uber/problem_2.go)
+[Solution](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/solutions/uber/problem_2.go)
