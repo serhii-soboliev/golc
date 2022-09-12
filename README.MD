@@ -25,6 +25,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |[6](https://leetcode.com/problems/zigzag-conversion/)| Zigzag Conversion | [link](pkg/leetcode/string/6.zigzag_conversion.go)| String|
 |30| Substring with Concatenation of All Words | [link](pkg/leetcode/string/30.substring_with_concatenation_of_all_words.go)| String|
 |33| Sudoku Solver | [link](pkg/leetcode/backtracking/33.sudoku_solver.go)| Backtracking|
+|[41](https://leetcode.com/problems/first-missing-positive/)| First Missing Positive | [link](pkg/dailycodingproblems/solutions/stripe/problem_4.go)| Array|
 |48| Rotate Image | [link](pkg/leetcode/matrix/48.rotate_image.go)| Matrix|
 |66| Plus One | [link](pkg/leetcode/math/66.plus_one.go)| Math |
 |86| Partition list | [link](pkg/leetcode/linkedlist/86.partition_list.go)| Linked List|
@@ -103,3 +104,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 ### Uber problems
 
 #### [Problem 2. Product of Array Except Self](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Uber/problems.md#problem-2)
+
+### Stripe problems
+
+#### [Problem 4. First Missing Positive](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Stripe/problems.md#problem-4)
