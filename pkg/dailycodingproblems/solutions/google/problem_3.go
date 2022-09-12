@@ -33,13 +33,12 @@ https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 */
 
 type TreeNode struct {
-      Val int
-      Left *TreeNode
-      Right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
 type Codec struct {
-    
 }
 
 func Constructor() Codec {
@@ -55,8 +54,8 @@ func (c *Codec) serialize(root *TreeNode) string {
 	return result
 }
 
-func (c *Codec) deserialize(data string) *TreeNode {    
-	if data == "" {
+func (c *Codec) deserialize(data string) *TreeNode {
+	if data == "" || data == "[]" {
 		return nil
 	}
 	if data[0] != '[' {
@@ -65,13 +64,44 @@ func (c *Codec) deserialize(data string) *TreeNode {
 			panic("Invalid string")
 		}
 		return &TreeNode{v, nil, nil}
-	} else {
-		//fir
 	}
-	return nil
+	cBIdx := findClosingBracketIndex(data, 0)
+	if cBIdx == len(data)-1 {
+		return c.deserialize(data[1 : len(data)-1])
+	}
+	oBIdx := findSymbolStartingFromIndex(data, '[', cBIdx)
+	left := data[1:cBIdx]
+	center := data[cBIdx+1 : oBIdx]
+	right := data[oBIdx:]
+	root := c.deserialize(center)
+	root.Left = c.deserialize(left)
+	root.Right = c.deserialize(right)
+	return root
+
 }
 
-func findClosingBracketIndex(s string, openIdx int) {
+func findSymbolStartingFromIndex(s string, c byte, startIndex int) int {
+	for i := startIndex; i < len(s); i++ {
+		if s[i] == c {
+			return i
+		}
+	}
+	panic("Shouldnt get there")
+}
+
+func findClosingBracketIndex(s string, openIdx int) int {
+	openBracketsCount := 1
+	for i := openIdx + 1; i < len(s); i++ {
+		if s[i] == '[' {
+			openBracketsCount += 1
+		} else if s[i] == ']' {
+			openBracketsCount -= 1
+			if openBracketsCount == 0 {
+				return i
+			}
+		}
+	}
+	panic("Shouldnt get there")
 
 }
 

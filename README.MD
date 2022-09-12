@@ -39,6 +39,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |240| Search 2D Matrix 2 | [link](pkg/leetcode/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |
 |242| Valid Anagram | [link](pkg/leetcode/string/242.valid_anagram.go)| Binary Search |
 |282| Expression And Operators| [link](pkg/leetcode/backtracking/282.expression_add_operators.go)| Backtracking |
+|[297](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)| Serialize and Deserialize Binary Tree| [link](pkg/dailycodingproblems/solutions/google/problem_3.go)| Data structure |
 |301| Remove Invalid Parentheses| [link](pkg/leetcode/backtracking/301.remove_invalid_parentheses.go)| Backtracking |
 |363| Max Sum of Rectangle No Larger Than K| [link](pkg/leetcode/matrix/363.max_sum_rectangle_no_larger_k.go)| Prefix Sum |
 |377| Combination Sum IV | [link](pkg/leetcode/dynamicprogramming/377.combination_sum_4.go)| DP |
