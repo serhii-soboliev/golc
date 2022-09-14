@@ -77,6 +77,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |1220| Count Vowels Permutation| [link](pkg/leetcode/dynamicprogramming/1220.count_vowels_permutation.go)| DP|
 |1255| Maximum Score Words Formed by Letters| [link](pkg/leetcode/backtracking/1255.maximum_score_words_formed_by_letters.go)| Backtracking|
 |1329| Sort the Matrix Diagonally| [link](pkg/leetcode/matrix/1329.sort_matrix_diagonally.go)| Matrix|
+|[1457](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/)| Pseudo-Palindromic Paths in a Binary Tree| [link](pkg/leetcode/tree/1457.ppaths_binary_tree.go)| DFS|
 |1588| Sum of All Odd Length Subarrays| [link](pkg/leetcode/array/1588.sum_all_odd_length_subarrays.go)| Prefix Sum|
 |1593| Split a String Into the Max Number of Unique Substrings| [link](pkg/leetcode/backtracking/1593.split_string_into_max_number_of_unique_substrings.go)| Backtracking |
 |1601| Maximum Number of Achievable Transfer Requests| [link](pkg/leetcode/backtracking/1601.max_num_achievable_transf_req.go)| Backtracking |
