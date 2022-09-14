@@ -8,25 +8,13 @@ https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/
 func pseudoPalindromicPaths(root *TreeNode) int {
 	result := 0
 
-	isPseudoPalindrome := func(p [10]int) bool {
-		oddCnt := 0
-		for _, v := range p {
-			if v%2 == 1 {
-				oddCnt += 1
+	var dfs func(tn *TreeNode, path int)
+	dfs = func(tn *TreeNode, path int) {
+		path = path ^ (1 << tn.Val)
+		if tn.Left == nil && tn.Right == nil{
+			if path & (path - 1) == 0 {
+				result += 1
 			}
-			if oddCnt > 1 {
-				return false
-			}
-		}
-		return true
-	}
-
-	var dfs func(tn *TreeNode, path [10]int)
-	dfs = func(tn *TreeNode, path [10]int) {
-		path[tn.Val] += 1
-
-		if tn.Left == nil && tn.Right == nil && isPseudoPalindrome(path) {
-			result += 1
 		}
 		
 		if tn.Left != nil {
@@ -37,7 +25,7 @@ func pseudoPalindromicPaths(root *TreeNode) int {
 		}
 
 	}
-	dfs(root, [10]int{})
+	dfs(root, 0)
 	return result
 }
 
