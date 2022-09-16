@@ -84,6 +84,8 @@ Leetcode & DailyCodingProblem practice using GoLang
 |1647| Minimum Deletions to Make Character Frequencies Unique| [link](pkg/leetcode/greedy/1647.min_del_make_char_freq_unique.go)| Greedy |
 |1723| Find Minimum Time to Finish All Jobs| [link](pkg/leetcode/backtracking/1723.find_min_time_to_finish_all_jobs.go)| Backtracking|
 |1732| Find the Highest Altitude| [link](pkg/leetcode/array/1732.highest_altitude.go)| Array|
+|[1770](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/
+)| Maximum Score from Performing Multiplication Operations| [link](pkg/leetcode/dynamicprogramming/1770.max_score_from_mult.go)| DP|
 |1799| Maximize Score After N Operations| [link](pkg/leetcode/backtracking/1799.maximize_score_after_n_operations.go)| DFS+Memo|
 |[1996](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)| The Number of Weak Characters in the Game| [link](pkg/leetcode/greedy/1996.num_of_weak_chars.go)| Greedy|
 |2014| Longest Subsequence Repeated k Times| [link](pkg/leetcode/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
