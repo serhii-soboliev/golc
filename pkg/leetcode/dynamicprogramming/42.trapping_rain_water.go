@@ -21,6 +21,30 @@ func trapBrutForce(height []int) int {
 	return result
 }
 
+func trapDP(height []int) int {
+	l := len(height)
+	if l == 0 {
+		return 0
+	}
+	leftMax := make([]int, l)
+	leftMax[0] = height[0]
+	for i:=1; i<l; i++ {
+		leftMax[i] = max(leftMax[i-1], height[i])
+	}
+
+	rightMax := make([]int, l)
+	rightMax[l-1] = height[l-1]
+	for i:=l-2; i>=0; i-- {
+		rightMax[i] = max(rightMax[i+1], height[i])
+	}
+
+	result := 0
+	for i, v := range height {
+		result += min(leftMax[i], rightMax[i]) - v
+	}
+	return result
+}
+
 func max(a, b int) int {
 	if a > b {
 		return a
@@ -37,4 +61,8 @@ func min(a, b int) int {
 
 func TrapBrutForce(height []int) int {
 	return trapBrutForce(height)
+}
+
+func TrapDP(height []int) int {
+	return trapDP(height)
 }
