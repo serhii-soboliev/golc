@@ -26,6 +26,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |30| Substring with Concatenation of All Words | [link](pkg/leetcode/string/30.substring_with_concatenation_of_all_words.go)| String|
 |33| Sudoku Solver | [link](pkg/leetcode/backtracking/33.sudoku_solver.go)| Backtracking|
 |[41](https://leetcode.com/problems/first-missing-positive/)| First Missing Positive | [link](pkg/dailycodingproblems/solutions/stripe/problem_4.go)| Array|
+|[42](https://leetcode.com/problems/trapping-rain-water/)| Trapping Rain Water | [link](pkg/leetcode/dynamicprogramming/42.trapping_rain_water.go)| DP|
 |48| Rotate Image | [link](pkg/leetcode/matrix/48.rotate_image.go)| Matrix|
 |66| Plus One | [link](pkg/leetcode/math/66.plus_one.go)| Math |
 |86| Partition list | [link](pkg/leetcode/linkedlist/86.partition_list.go)| Linked List|
