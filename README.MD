@@ -10,8 +10,8 @@ Leetcode & DailyCodingProblem practice using GoLang
 
 ### Table of Contents
 
-**[Leetcode](#leetcode-problems)**<br/>
-**[Daily Coding Problem](#daily-coding-problem)**<br>
+**[Leetcode](#leetcode-problems)** \
+**[Daily Coding Problem](#daily-coding-problem)**
 
 ## Leetcode Problems
 
@@ -26,7 +26,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |30| Substring with Concatenation of All Words | [link](pkg/leetcode/string/30.substring_with_concatenation_of_all_words.go)| String|
 |33| Sudoku Solver | [link](pkg/leetcode/backtracking/33.sudoku_solver.go)| Backtracking|
 |[41](https://leetcode.com/problems/first-missing-positive/)| First Missing Positive | [link](pkg/dailycodingproblems/solutions/stripe/problem_4.go)| Array|
-|[42](https://leetcode.com/problems/trapping-rain-water/)| Trapping Rain Water | [link](pkg/leetcode/dynamicprogramming/42.trapping_rain_water.go)| DP|
+|[42](https://leetcode.com/problems/trapping-rain-water/)| Trapping Rain Water | [link](pkg/leetcode/dynamicprogramming/42.trapping_rain_water.go)| DP, Brute Force, Stack|
 |48| Rotate Image | [link](pkg/leetcode/matrix/48.rotate_image.go)| Matrix|
 |66| Plus One | [link](pkg/leetcode/math/66.plus_one.go)| Math |
 |86| Partition list | [link](pkg/leetcode/linkedlist/86.partition_list.go)| Linked List|
@@ -86,8 +86,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |1647| Minimum Deletions to Make Character Frequencies Unique| [link](pkg/leetcode/greedy/1647.min_del_make_char_freq_unique.go)| Greedy |
 |1723| Find Minimum Time to Finish All Jobs| [link](pkg/leetcode/backtracking/1723.find_min_time_to_finish_all_jobs.go)| Backtracking|
 |1732| Find the Highest Altitude| [link](pkg/leetcode/array/1732.highest_altitude.go)| Array|
-|[1770](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations/
-)| Maximum Score from Performing Multiplication Operations| [link](pkg/leetcode/dynamicprogramming/1770.max_score_from_mult.go)| DP|
+|[1770](https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations)| Maximum Score from Performing Multiplication Operations| [link](pkg/leetcode/dynamicprogramming/1770.max_score_from_mult.go)| DP|
 |1799| Maximize Score After N Operations| [link](pkg/leetcode/backtracking/1799.maximize_score_after_n_operations.go)| DFS+Memo|
 |[1996](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/)| The Number of Weak Characters in the Game| [link](pkg/leetcode/greedy/1996.num_of_weak_chars.go)| Greedy|
 |2014| Longest Subsequence Repeated k Times| [link](pkg/leetcode/backtracking/2014.longest_subsequence_repeated_k_times.go)| Backtracking|
@@ -104,7 +103,8 @@ Leetcode & DailyCodingProblem practice using GoLang
 ### Google problems
 
 #### [Problem 1. Sum of two](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-1)
-####  [Problem 3. Serialize and Deserialize Binary Tree](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-3)
+
+#### [Problem 3. Serialize and Deserialize Binary Tree](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-3)
 
 ### Uber problems
 

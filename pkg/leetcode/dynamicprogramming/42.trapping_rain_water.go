@@ -45,6 +45,26 @@ func trapDP(height []int) int {
 	return result
 }
 
+func trapStack(height []int) int {
+	l := len(height)
+	st := []int{}
+	result := 0
+	for current:=0;current<l;current+=1 {
+		for len(st) > 0 && height[current] > height[st[len(st)-1]] {
+			top := st[len(st)-1]
+			st = st[:len(st)-1]
+			if len(st) == 0 {
+				break
+			}
+			dis := current - st[len(st)-1] - 1
+			boundedHeight := min(height[current], height[st[len(st)-1]]) - height[top];
+            result += dis * boundedHeight; 
+		}
+		st = append(st, current)
+	}
+	return result
+}
+
 func max(a, b int) int {
 	if a > b {
 		return a
@@ -57,6 +77,10 @@ func min(a, b int) int {
 		return a
 	}
 	return b
+}
+
+func TrapStack(height []int) int {
+	return trapStack(height)
 }
 
 func TrapBrutForce(height []int) int {
