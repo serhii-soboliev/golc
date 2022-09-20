@@ -107,6 +107,8 @@ Leetcode & DailyCodingProblem practice using GoLang
 
 #### [Problem 3. Serialize and Deserialize Binary Tree](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-3)
 
+#### [Problem 6. XOR Linked List](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Google/problems.md#problem-6)
+
 ### Uber problems
 
 #### [Problem 2. Product of Array Except Self](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Uber/problems.md#problem-2)
