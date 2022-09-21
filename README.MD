@@ -72,6 +72,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |[948](https://leetcode.com/problems/bag-of-tokens/)| Bag of Tokens| [link](pkg/leetcode/greedy/936.stamping_the_sequence.go)| Greedy|
 |967| Numbers With Same Consecutive Differences| [link](pkg/leetcode/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
 |980| Unique Paths III| [link](pkg/leetcode/backtracking/980.unique_paths_III.go)| Backtracking|
+|[985](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)| Sum of Even Numbers After Queries | [link](pkg/leetcode/simulation/985.sum_even_numbers_after_q.go)| Simulation|
 |996| Number of Squareful Arrays| [link](pkg/leetcode/backtracking/996.number_of_squareful_arrays.go)| Backtracking|
 |1079| Letter Tile Possibilities| [link](pkg/leetcode/backtracking/1079.letter_tile_possibilities.go)| Backtracking |
 |1096| Brace Expansion II| [link](pkg/leetcode/bfs/1096.brace_expansion_II.go)| BFS |
