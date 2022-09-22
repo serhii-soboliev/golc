@@ -30,6 +30,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |48| Rotate Image | [link](pkg/leetcode/matrix/48.rotate_image.go)| Matrix|
 |66| Plus One | [link](pkg/leetcode/math/66.plus_one.go)| Math |
 |86| Partition list | [link](pkg/leetcode/linkedlist/86.partition_list.go)| Linked List|
+|[91](https://leetcode.com/problems/decode-ways/submissions/)| Decode Ways | [link](pkg/dailycodingproblems/solutions/facebook/problem_7.go)| DP|
 |122| Word Ladder II | [link](pkg/leetcode/backtracking/126.word_ladder_2.go)| Backtracking|
 |140| Word Break II | [link](pkg/leetcode/backtracking/140.word_break_2.go)| Backtracking|
 |[188](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)| Best Time to Buy and Sell Stock IV | [link](pkg/leetcode/dynamicprogramming/188.best_time_buy_sell_stock4.go)| DP |
@@ -118,3 +119,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 ### Stripe problems
 
 #### [Problem 4. First Missing Positive](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Stripe/problems.md#problem-4)
+
+### Facebook problems
+
+#### [Problem 7. Decode ways](https://github.com/serhii-soboliev/golc/blob/main/pkg/dailycodingproblems/problems/Facebook/problems.md#problem-7)
