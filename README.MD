@@ -50,6 +50,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |491| Increasing Subsequences| [link](pkg/leetcode/backtracking/491.increasing_subsequences.go)| String|
 |494| Target Sum | [link](pkg/leetcode/backtracking/494.target_sum.go)| Backtracking|
 |526| Beautiful Arrangement | [link](pkg/leetcode/backtracking/526.beautiful_arrangement.go)| Backtracking|
+|[526](https://leetcode.com/problems/reverse-words-in-a-string-iii/)| Reverse Words in a String III | [link](pkg/leetcode/twopointers/557.reverse_words_str3.go)| Two pointers|
 |[606](https://leetcode.com/problems/construct-string-from-binary-tree/)| Construct String from Binary Tree  | [link](pkg/leetcode/tree/606.construct_str_from_binary_tree.go)| Tree|
 |[609](https://leetcode.com/problems/find-duplicate-file-in-system/)| Find Duplicate File in System  | [link](pkg/leetcode/hashmap/609.duplicate_fill.go)| HashMap|
 |638| Shopping Offers  | [link](pkg/leetcode/backtracking/638.shopping_offers.go)| Backtracking|
