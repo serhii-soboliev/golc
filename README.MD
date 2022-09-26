@@ -75,6 +75,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |967| Numbers With Same Consecutive Differences| [link](pkg/leetcode/backtracking/967.numbers_with_same_consecutive_diff.go)| Backtracking|
 |980| Unique Paths III| [link](pkg/leetcode/backtracking/980.unique_paths_III.go)| Backtracking|
 |[985](https://leetcode.com/problems/sum-of-even-numbers-after-queries/)| Sum of Even Numbers After Queries | [link](pkg/leetcode/simulation/985.sum_even_numbers_after_q.go)| Simulation|
+|[990](https://leetcode.com/problems/satisfiability-of-equality-equations/)| Satisfiability of Equality Equations | [link](pkg/leetcode/unionfind/990.sat_eq_eq.go)| Union find|
 |996| Number of Squareful Arrays| [link](pkg/leetcode/backtracking/996.number_of_squareful_arrays.go)| Backtracking|
 |1079| Letter Tile Possibilities| [link](pkg/leetcode/backtracking/1079.letter_tile_possibilities.go)| Backtracking |
 |1096| Brace Expansion II| [link](pkg/leetcode/bfs/1096.brace_expansion_II.go)| BFS |
