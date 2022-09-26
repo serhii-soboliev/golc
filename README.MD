@@ -31,7 +31,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |66| Plus One | [link](pkg/leetcode/math/66.plus_one.go)| Math |
 |86| Partition list | [link](pkg/leetcode/linkedlist/86.partition_list.go)| Linked List|
 |[91](https://leetcode.com/problems/decode-ways/submissions/)| Decode Ways | [link](pkg/dailycodingproblems/solutions/facebook/problem_7.go)| DP|
-|[113](https://leetcode.com/problems/path-sum-ii/)| Path Sum II | [link](pkg/leetcode/tree/113.path_sum_2.go)| DFS|
+|[113](https://leetcode.com/problems/path-sum-ii/)| Path Sum II | [link](pkg/leetcode/tree/113.path_sum_2.go)| DFS, Backtracking|
 |122| Word Ladder II | [link](pkg/leetcode/backtracking/126.word_ladder_2.go)| Backtracking|
 |140| Word Break II | [link](pkg/leetcode/backtracking/140.word_break_2.go)| Backtracking|
 |[188](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)| Best Time to Buy and Sell Stock IV | [link](pkg/leetcode/dynamicprogramming/188.best_time_buy_sell_stock4.go)| DP |
