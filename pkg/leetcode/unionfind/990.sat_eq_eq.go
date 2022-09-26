@@ -19,18 +19,26 @@ func equationsPossible(equations []string) bool {
 		}
 	}
 
+	unite := func(x, y byte) {
+		u[find(x - 'a')] = find(y - 'a')
+	}
+
+	isUnited := func(x, y byte) bool{
+		return find(x - 'a') == find(y - 'a')
+	}
+
 	for i := range u {
 		u[i] = byte(i) 
 	}
 
 	for _, eq := range equations {
 		if eq[1] == '=' {
-			u[find(eq[0] - 'a')] = find(eq[3] - 'a'); 	
+			unite(eq[0], eq[3]) 	
 		}
 	}
 
 	for _, eq := range equations {
-		if eq[1] == '!' && find(eq[0] - 'a') == find(eq[3] - 'a') {
+		if eq[1] == '!' && isUnited(eq[0], eq[3]) {
 			return false
 		}
 	}
