@@ -5,6 +5,25 @@ package linkedlist
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 */
 
+func removeNthFromEnd(head *ListNode, n int) *ListNode {
+
+	temp := &ListNode{Next:head}
+	fast, slow := temp, temp
+
+	for i:=1; i<=n; i++ {
+		fast = fast.Next
+	}
+
+	for fast.Next != nil {
+		fast = fast.Next
+		slow = slow.Next
+	}
+
+	slow.Next = slow.Next.Next
+	return temp.Next		
+}
+
+
 func removeNthFromEndIterative(head *ListNode, n int) *ListNode {
 
 	llLen := func(h *ListNode) int {
