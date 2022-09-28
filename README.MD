@@ -23,7 +23,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |[4](https://leetcode.com/problems/median-of-two-sorted-arrays/)| 4. Median of Two Sorted Arrays| [link](pkg/leetcode/binarysearch/4.median_of_two_sorted_arrays.go)| Binary Search |
 |[5](https://leetcode.com/problems/longest-palindromic-substring/)| Longest Palindromic Substring | [link](pkg/leetcode/string/5.longest_palindromic_substring.go)| String|
 |[6](https://leetcode.com/problems/zigzag-conversion/)| Zigzag Conversion | [link](pkg/leetcode/string/6.zigzag_conversion.go)| String|
-|[19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)|Remove Nth Node From End of List | [link](pkg/leetcode/linkedlist/19.rem_nth_node_f_end.go)| Linked List Iterative|
+|[19](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)|Remove Nth Node From End of List | [link](pkg/leetcode/linkedlist/19.rem_nth_node_f_end.go)| Fast&Slow pointer|
 |30| Substring with Concatenation of All Words | [link](pkg/leetcode/string/30.substring_with_concatenation_of_all_words.go)| String|
 |33| Sudoku Solver | [link](pkg/leetcode/backtracking/33.sudoku_solver.go)| Backtracking|
 |[41](https://leetcode.com/problems/first-missing-positive/)| First Missing Positive | [link](pkg/dailycodingproblems/solutions/stripe/problem_4.go)| Array|
