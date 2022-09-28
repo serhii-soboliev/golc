@@ -8,12 +8,12 @@ Leetcode & DailyCodingProblem practice using GoLang
 ![Code Quality Score](https://api.codiga.io/project/34041/score/svg)
 ![Code Grade](https://api.codiga.io/project/34041/status/svg)
 
-### Table of Contents
+## Table of Contents
 
 **[Leetcode](#leetcode-problems)** \
 **[Daily Coding Problem](#daily-coding-problem)**
 
-## Leetcode Problems
+### Leetcode Problems
 
 |#  | Problem          | Link To Solution                              | Method               |
 |:-:| :---             | :-                                            | :-                   |
