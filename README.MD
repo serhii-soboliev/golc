@@ -39,6 +39,7 @@ Leetcode & DailyCodingProblem practice using GoLang
 |199| Binary Tree Right Side View | [link](pkg/leetcode/tree/199.binary_tree_right_side_view.go)| Binary Tree|
 |208| Trie(Prefix tree) | [link](pkg/leetcode/datastructures/trie/208.trie.go)| Trie|
 |212| Word Search 2 | [link](pkg/leetcode/backtracking/212.word_search_2.go)| Backtracking |
+|[218](https://leetcode.com/problems/the-skyline-problem/)| The Skyline Problem | [link](pkg/leetcode/priorityqueue/218.skyline.go)| Priority Queue |
 |234| Palindrome Linked List | [link](pkg/leetcode/linkedlist/234.palindrome_linked_list.go)| Linked List |
 |[238](https://leetcode.com/problems/product-of-array-except-self/)| Product of Array Except Self | [link](pkg/dailycodingproblems/uber/problem_2.go)| Array |
 |240| Search 2D Matrix 2 | [link](pkg/leetcode/binarysearch/240.search_2d_matrix_ll.go)| Binary Search |

@@ -1,6 +1,55 @@
-package pq
+package priorityqueue
 
-import "container/heap"
+import (
+	"container/heap"
+	"sort"
+)
+
+/*
+218. The Skyline Problem
+https://leetcode.com/problems/the-skyline-problem/
+*/
+
+func getSkyline(buildings [][]int) [][]int {
+	result := [][]int{}
+	sortedBuildings := sortBuildings(buildings)
+	pq := NewPriorityQueue()
+	pq.Push(0)
+	for _, sb := range sortedBuildings {
+		height := sb[1]
+		if height > 0 {
+			if height > pq.Peek() {
+				result = append(result, []int{sb[0], height})	
+			}
+			pq.Push(height)
+		} else {
+			pq.RemoveOnce(-height)
+			if pq.Peek() < -height {
+				result = append(result, []int{sb[0], pq.Peek()})	
+			}
+		}
+	}
+	return result
+}
+
+func sortBuildings(buildings [][]int) (r [][]int) {
+	for _, b := range buildings {
+		r = append(r, []int{b[0], b[2]})
+		r = append(r, []int{b[1], -b[2]})
+	}
+	sort.Slice(r, func(i, j int) bool { 
+		if r[i][0] != r[j][0] {
+			return r[i][0] < r[j][0]
+		} else {
+			return r[i][1] > r[j][1]
+		}
+	})
+	return
+}
+
+func GetSkyline(buildings [][]int) [][]int {
+	return getSkyline(buildings)
+}
 
 type PriorityQueue struct {
 	innerPq InnerPq

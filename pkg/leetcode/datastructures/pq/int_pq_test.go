@@ -105,3 +105,39 @@ func TestPQ3(t *testing.T) {
 	assert.Equal(t, -1, p.Pop())
 	assert.Equal(t, -2, p.Pop())
 }
+
+func TestPQ4(t *testing.T) {
+	p := pq.NewPriorityQueue()
+	p.Push(1)
+	p.Push(3)
+	p.Push(2)
+	p.Push(-1)
+	p.Push(-2)
+	assert.Equal(t, 5, p.Len())
+	assert.Equal(t, 3, p.Peek())
+	assert.Equal(t, 3, p.Pop())
+	assert.Equal(t, 2, p.Peek())
+	assert.Equal(t, 4, p.Len())
+	assert.Equal(t, 2, p.Pop())
+	assert.Equal(t, 1, p.Peek())
+	assert.Equal(t, 3, p.Len())
+	assert.Equal(t, 1, p.Pop())
+	assert.Equal(t, -1, p.Pop())
+	assert.Equal(t, -2, p.Pop())
+}
+
+func TestPQ5(t *testing.T) {
+	p := pq.NewPriorityQueue()
+	p.Push(3)
+	p.Push(3)
+	p.Push(3)
+	p.Push(2)
+	p.Push(-1)
+	p.Push(-2)
+	assert.Equal(t, 6, p.Len())
+	p.RemoveOnce(3)
+	assert.Equal(t, 5, p.Len())
+	p.Remove(3)
+	assert.Equal(t, 3, p.Len())
+}
+
