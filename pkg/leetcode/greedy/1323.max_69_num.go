@@ -28,7 +28,7 @@ func maximum69Number (num int) int {
 	if digitsToTheRight == -1 {
 		return num
 	} else {
-		return num + 3*int(math.Pow(10, float64(digitsToTheRight)))
+		return num + 3*int(math.Pow10(digitsToTheRight))
 	}
 }
 
@@ -38,3 +38,4 @@ func maximum69Number_2 (num int) int {
 	i, _ := strconv.Atoi(r)
 	return i
 }
+
