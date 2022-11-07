@@ -1,5 +1,7 @@
 package string
 
+import "sort"
+
 /*
 387. First Unique Character in a String
 https://leetcode.com/problems/first-unique-character-in-a-string/
@@ -25,3 +27,22 @@ func firstUniqChar(s string) int {
 	return -1
 }
 
+/*
+1.1
+Is Unique: Implement an algorithm to determine if a string has all unique characters. What if you
+cannot use additional data structures?
+*/
+func IsUnique(word string) bool {
+	n := len(word)
+	s := []rune(word)
+    sort.Slice(s, func(i int, j int) bool { return s[i] < s[j] })
+
+	t := s[0]
+	for i:=1; i<n; i++ {
+		if s[i] == t {
+			return false
+		}
+		t = s[i]	
+	}
+	return true
+}
