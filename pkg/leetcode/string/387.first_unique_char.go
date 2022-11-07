@@ -46,3 +46,18 @@ func IsUnique(word string) bool {
 	}
 	return true
 }
+
+func IsUnique2(word string) bool {
+	checker := 0
+	for _, v := range word {
+		val := int(v - 'a')
+		b := 1 << val
+		if checker & b > 0 {
+			return false
+		}
+		checker |= b	
+	}
+	return true
+}
+
+
