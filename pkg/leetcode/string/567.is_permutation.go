@@ -39,3 +39,30 @@ func checkInclusion(s1 string, s2 string) bool {
 func CheckInclusion(s1 string, s2 string) bool {
 	return checkInclusion(s1, s2)
 }
+
+/*
+1.2
+Check Permutation: Given two strings,write a method to decide if one is a permutation of the
+other.
+*/
+
+func IsPermutation(s1, s2 string) bool {
+	if len(s1) != len(s2) {
+		return false
+	}
+	const AlphabetLength = 26
+	s1Counts := make([]int, AlphabetLength)
+	for _, c := range s1 {
+		s1Counts[c - 'a'] += 1
+	}
+	count := len(s1) 
+	for _, c := range s2 {
+		idx := c - 'a'
+		if s1Counts[idx] == 0 {
+			return false
+		}
+		s1Counts[idx] -= 1
+		count -= 1
+	}
+	return true
+}

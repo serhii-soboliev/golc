@@ -24,3 +24,16 @@ func TestCheckInclusion4(t *testing.T) {
 	assert.True(t, st.CheckInclusion("ky", "kifykxlribaypk"))
 }
 
+func TestIsPermutation1(t *testing.T) {
+	assert.True(t, st.IsPermutation("ky", "yk"))
+}
+
+func TestIsPermutation2(t *testing.T) {
+	assert.False(t, st.IsPermutation("kyl", "ykm"))
+}
+
+func TestIsPermutation3(t *testing.T) {
+	assert.True(t, st.IsPermutation("kylp", "ykpl"))
+}
+
+
